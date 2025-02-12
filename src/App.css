@@ -1,13 +1,15 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  margin: 20px auto;
 }
 
 ul {
+  position: absolute;
+  left: 43.5%;
+  z-index: 1;
   padding: 0;
-  margin: 0;
+  margin: auto;
 }
 
 li {
@@ -18,9 +20,25 @@ li button {
   width: 100%;
 }
 
+.guess-list {
+  margin: 50px auto;
+}
+
 .pokemon-clues {
   display: flex;
   gap: 12px;
   align-items: center;
+  margin: 20px auto;
+}
+
+.pokemon-clues div {
+  height: 100px;
+  width: 100px;
+  place-content: center;
+  border: 1px solid black;
+}
+
+.pokemon-clues div img {
+  width: 90%;
 }
 
