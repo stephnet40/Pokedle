@@ -29,6 +29,7 @@ function App() {
 
   const [searchInput, setSearchInput] = useState('');
   const [searchResults, setSearchResults] = useState<Pokemon[]>([]);
+  const [currGuess, setCurrGuess] = useState<Pokemon>();
   const [guesses, setGuesses] = useState<Pokemon[]>([]);
 
   const handleSearch = (searchTerm: string) => {
@@ -48,9 +49,9 @@ function App() {
 
   const selectPokemon = (pokemon: Pokemon) => {
     let currList = guesses;
-    currList.push(pokemon);
-    currList = currList.reverse();
+    currList.unshift(pokemon);
     setGuesses(currList);
+    setCurrGuess(pokemon);
 
     let currPokemon = allPokemon;
     currPokemon.splice(currPokemon.indexOf(pokemon), 1);
@@ -86,15 +87,15 @@ function App() {
   }
 
   const compareColor = (colors: string[], correctColors: string[]) => {
-    let matching = 0;
+    let matching: string[] = [];
 
     colors.forEach(color => {
-      if (correctColors.includes(color)) matching++;
+      if (correctColors.includes(color)) matching.push(color);
     })
 
-    if (matching == 0) return "wrong";
-    if (matching < correctColors.length) return "partial";
-    return "correct";
+    if (matching.length == 0) return "wrong";
+    if (matching.length == correctColors.length) return "correct";
+    return "partial";
   }
 
   const compareSize = (size: number, correctSize: number) => {
@@ -106,13 +107,20 @@ function App() {
     <>
       <div>
         <div className='search'>
-          <input type='text' placeholder='Search' value={searchInput} onChange={handleInputChange}></input>
+          <input type='text' placeholder='Search' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
           <ul className='filtered-search'>
             {searchResults.map((result, index) => 
               <li key={index}>
                 <button key={`${index}-btn`} onClick={() => selectPokemon(result)}>{result.name}</button>
               </li>)}
           </ul>
+        </div>
+
+        <div>
+          {currGuess == dailyPokemon ? 
+            <div>Correct!</div> :
+            <div></div>
+          }
         </div>
 
         <div className='guess-list'>
