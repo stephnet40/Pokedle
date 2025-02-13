@@ -42,3 +42,15 @@ li button {
   width: 90%;
 }
 
+.correct {
+  background-color: rgb(124, 207, 124);
+}
+
+.wrong {
+  background-color: rgb(241, 117, 117);
+}
+
+.partial {
+  background-color: rgb(235, 195, 121);
+}
+
