@@ -1,8 +1,9 @@
 import data from './pokemon.json'
 import './App.css'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getDailyPokemon } from './utilities';
 
-interface Pokemon {
+export interface Pokemon {
   id: number,
   name: string,
   type1: string,
@@ -17,6 +18,15 @@ interface Pokemon {
 function App() {
 
   const [allPokemon, setAllPokemon] = useState<Pokemon[]>(data.pokemon);
+  const [dailyPokemon, setDailyPokemon] = useState<Pokemon>();
+  const generateDailyPokemon = (data: any) => {
+    setDailyPokemon(data);
+  }
+
+  useEffect(() => {
+    getDailyPokemon({allPokemon, generateDailyPokemon});
+  }, []);
+
   const [searchInput, setSearchInput] = useState('');
   const [searchResults, setSearchResults] = useState<Pokemon[]>([]);
   const [guesses, setGuesses] = useState<Pokemon[]>([]);
