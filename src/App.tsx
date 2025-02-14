@@ -79,8 +79,12 @@ function App() {
     return name;
   }
 
+  const formatTypes = (type: string) => {
+    return type.replace(/^./, char => char.toUpperCase());
+  }
+
   const formatColors = (colors: string[]) => {
-    return colors.join(", ");
+    return colors.map(x => x.replace(/^./, char => char.toUpperCase())).join(", ");
   }
 
   const formatHeight = (height: number) => {
@@ -125,7 +129,7 @@ function App() {
           </ul>
         </div>
 
-        <div>
+        <div className='win-message'>
           {currGuess == dailyPokemon ? 
             <div>Correct!</div> :
             <div></div>
@@ -141,12 +145,12 @@ function App() {
               <div key={`${index}-${pokemon}-type1`}
                    className={pokemon.type1 == dailyPokemon?.type1 ? 'correct' : 'wrong'}
               >
-                {pokemon.type1}
+                {formatTypes(pokemon.type1)}
               </div>
               <div key={`${index}-${pokemon}-type2`}
                    className={pokemon.type2 == dailyPokemon?.type2 ? 'correct' : 'wrong'}
               >
-                {pokemon.type2 ? pokemon.type2 : "None"}
+                {pokemon.type2 ? formatTypes(pokemon.type2) : "None"}
               </div>
               <div key={`${index}-${pokemon}-evolution-stage`}
                    className={pokemon.evolutionStage == dailyPokemon?.evolutionStage ? 'correct' : 'wrong'}

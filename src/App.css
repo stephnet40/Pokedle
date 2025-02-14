@@ -28,6 +28,11 @@ li button img {
   width: 50px;
 }
 
+.win-message {
+  font-size: 32px;
+  margin: 20px auto;
+}
+
 .guess-list {
   margin: 50px auto;
 }
