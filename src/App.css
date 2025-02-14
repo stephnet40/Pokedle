@@ -4,6 +4,14 @@
   margin: 20px auto;
 }
 
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
 ul {
   position: absolute;
   left: 36.05%;
@@ -27,6 +35,11 @@ li button {
 
 li button img {
   width: 60px;
+}
+
+.header {
+  line-height: 10px;
+  margin-bottom: 64px;
 }
 
 .search input {

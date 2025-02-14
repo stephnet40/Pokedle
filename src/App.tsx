@@ -116,6 +116,11 @@ function App() {
   return (
     <>
       <div>
+        <div className='header'>
+          <h1>Pokédle</h1>
+          <h2>A Wordle-inspired Pokemon Guessing Game</h2>
+        </div>
+
         <div className='search'>
           <input type='text' placeholder='Search for Pokémon' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
           <ul className='filtered-search'>
