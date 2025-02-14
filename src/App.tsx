@@ -1,4 +1,4 @@
-import data from './pokemon.json'
+import data from './data/pokemon.json'
 import './App.css'
 import { useEffect, useState } from 'react';
 import { getDailyPokemon } from './utilities';
