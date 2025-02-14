@@ -22,15 +22,18 @@ li button {
   display: flex;
   justify-content: start;
   align-items: center;
+  gap: 16px
 }
 
 li button img {
-  width: 50px;
+  width: 60px;
 }
 
 .search input {
   height: 32px;
-  width: 350px
+  width: 350px;
+  font-size: 20px;
+  padding: 2px 8px;
 }
 
 .win-message {

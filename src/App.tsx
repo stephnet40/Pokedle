@@ -117,7 +117,7 @@ function App() {
     <>
       <div>
         <div className='search'>
-          <input type='text' placeholder='Search for Pokemon' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
+          <input type='text' placeholder='Search for Pokémon' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
           <ul className='filtered-search'>
             {searchResults.map((result, index) => 
               <li key={index}>
