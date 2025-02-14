@@ -117,7 +117,7 @@ function App() {
     <>
       <div>
         <div className='search'>
-          <input type='text' placeholder='Search' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
+          <input type='text' placeholder='Search for Pokemon' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
           <ul className='filtered-search'>
             {searchResults.map((result, index) => 
               <li key={index}>
@@ -139,7 +139,7 @@ function App() {
         <div className='guess-list'>
           {guesses.map((pokemon, index) => 
             <div key={`${index}-${pokemon}`} className='pokemon-clues'>
-              <div key={`${index}-${pokemon}-name`}>
+              <div key={`${index}-${pokemon}-name`} className='pokemon-img'>
                 <img src={getImgSrc(pokemon.name)}></img>
               </div>
               <div key={`${index}-${pokemon}-type1`}

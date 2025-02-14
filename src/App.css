@@ -6,14 +6,14 @@
 
 ul {
   position: absolute;
-  left: 43.5%;
+  left: 36.05%;
   z-index: 1;
   padding: 0;
   margin: auto;
 }
 
 li {
-  width: 167px;
+  width: 358px;
   list-style: none;
 }
 
@@ -26,6 +26,11 @@ li button {
 
 li button img {
   width: 50px;
+}
+
+.search input {
+  height: 32px;
+  width: 350px
 }
 
 .win-message {
@@ -49,6 +54,11 @@ li button img {
   width: 100px;
   place-content: center;
   border: 1px solid black;
+  border-radius: 5px;
+}
+
+.pokemon-img {
+  background-color: white;
 }
 
 .pokemon-clues div img {
@@ -56,14 +66,14 @@ li button img {
 }
 
 .correct {
-  background-color: rgb(124, 207, 124);
+  background-color: rgba(124, 207, 124, 0.85);
 }
 
 .wrong {
-  background-color: rgb(241, 117, 117);
+  background-color: rgba(241, 117, 117, 0.85);
 }
 
 .partial {
-  background-color: rgb(235, 195, 121);
+  background-color: rgba(235, 195, 121, 0.85);
 }
 
