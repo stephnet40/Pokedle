@@ -73,6 +73,12 @@ function App() {
     return `sprites/${name}.png`;
   }
 
+  const formatName = (name: string) => {
+    name = name.split(" ").map(x => x.replace(/^./, char => char.toUpperCase())).join(" ")
+    name = name.replace(/\-f$|\-m$/, char => char == "-f" ? " ♀" : " ♂");
+    return name;
+  }
+
   const formatColors = (colors: string[]) => {
     return colors.join(", ");
   }
@@ -111,7 +117,7 @@ function App() {
           <ul className='filtered-search'>
             {searchResults.map((result, index) => 
               <li key={index}>
-                <button key={`${index}-btn`} onClick={() => selectPokemon(result)}>{result.name}</button>
+                <button key={`${index}-btn`} onClick={() => selectPokemon(result)}>{formatName(result.name)}</button>
               </li>)}
           </ul>
         </div>
