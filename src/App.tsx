@@ -117,7 +117,10 @@ function App() {
           <ul className='filtered-search'>
             {searchResults.map((result, index) => 
               <li key={index}>
-                <button key={`${index}-btn`} onClick={() => selectPokemon(result)}>{formatName(result.name)}</button>
+                <button key={`${index}-btn`} onClick={() => selectPokemon(result)}>
+                  <img src={getImgSrc(result.name)}></img>
+                  {formatName(result.name)}
+                </button>
               </li>)}
           </ul>
         </div>

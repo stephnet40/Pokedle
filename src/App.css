@@ -13,11 +13,19 @@ ul {
 }
 
 li {
+  width: 167px;
   list-style: none;
 }
 
 li button {
   width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+li button img {
+  width: 50px;
 }
 
 .guess-list {
