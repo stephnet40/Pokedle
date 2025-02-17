@@ -12,6 +12,10 @@ const Hints = ({isOpen, hintType, pokemon} : HintsModalProps) => {
 
     const allAbilities = data.abilities;
 
+    const formatAbilityName = (name: string) => {
+        return name.split('-').map(x => x.replace(/^./, char => char.toUpperCase())).join(" ");
+    }
+
     const displayHint = (type: string) => {
         if (pokemon) {
             switch (type) {
@@ -19,7 +23,7 @@ const Hints = ({isOpen, hintType, pokemon} : HintsModalProps) => {
                     const ability = allAbilities.find(x => x.name == pokemon.ability)!;
                     return (
                         <div>
-                            <div>{ability.name}</div>
+                            <div>{formatAbilityName(ability.name)}</div>
                             <div>{ability.description}</div>
                         </div>
                     )

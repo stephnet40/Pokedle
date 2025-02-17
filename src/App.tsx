@@ -131,15 +131,21 @@ function App() {
           <div></div>
           <div className='hint-buttons'>
             {/* Ability */}
-            <button onClick={() => {setHintsModalOpen(!hintsModalOpen); setHintType("ability")}}>
+            <button 
+              onClick={() => {setHintsModalOpen(hintsModalOpen && hintType != "ability" ? true : !hintsModalOpen); setHintType("ability")}} 
+            >
               Hint 1
             </button>
             {/* Pokedex Description */}
-            <button onClick={() => {setHintsModalOpen(!hintsModalOpen); setHintType("dex")}}>
+            <button 
+              onClick={() => {setHintsModalOpen(hintsModalOpen && hintType != "dex" ? true : !hintsModalOpen); setHintType("dex")}}
+            >
               Hint 2
             </button>
             {/* Blurry Silhouette */}
-            <button onClick={() => {setHintsModalOpen(!hintsModalOpen); setHintType("silhouette")}}>
+            <button 
+              onClick={() => {setHintsModalOpen(hintsModalOpen && hintType != "silhouette" ? true : !hintsModalOpen); setHintType("silhouette")}}
+            >
               Hint 3
             </button>
           </div>
