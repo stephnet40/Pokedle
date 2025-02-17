@@ -35,7 +35,14 @@ li button {
 
 li button img {
   width: 60px;
-  /* filter: blur(5px) brightness(0) - for hint*/
+}
+
+.empty-list button {
+  cursor: auto;
+}
+
+.empty-list button:hover {
+  border-color: rgb(173, 173, 173);
 }
 
 .header {
@@ -78,7 +85,11 @@ li button img {
   margin: 20px auto;
 }
 
-.clue-labels {
+.guess-list {
+  margin: 50px auto;
+}
+
+.clue-labels, .pokemon-clues {
   display: grid;
   grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
   gap: 12px;
@@ -89,18 +100,6 @@ li button img {
 .clue-labels div {
   width: 100px;
   text-align: center;
-}
-
-.guess-list {
-  margin: 50px auto;
-}
-
-.pokemon-clues {
-  display: grid;
-  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
-  gap: 12px;
-  align-items: center;
-  margin: 20px auto;
 }
 
 .pokemon-clues div {

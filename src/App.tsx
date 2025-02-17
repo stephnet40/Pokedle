@@ -34,7 +34,7 @@ function App() {
   const [searchResults, setSearchResults] = useState<Pokemon[]>([]);
   const [currGuess, setCurrGuess] = useState<Pokemon>();
   const [guesses, setGuesses] = useState<Pokemon[]>([]);
-  const [hintsModalOpen, setHintsModalOpen] = useState<boolean>(false);
+  const [showHint, setShowHint] = useState<boolean>(false);
   const [hintType, setHintType] = useState<string>("ability");
 
   const handleSearch = (searchTerm: string) => {
@@ -126,6 +126,12 @@ function App() {
                   {formatName(result.name)}
                 </button>
               </li>)}
+            {searchInput.length && !searchResults.length ? 
+              <li className='empty-list'>
+                <button>No Pokemon found</button>
+              </li> :
+              <li></li>
+            }
           </ul>
         </div>
 
@@ -134,25 +140,25 @@ function App() {
           <div className='hint-buttons'>
             {/* Ability */}
             <button 
-              onClick={() => {setHintsModalOpen(hintsModalOpen && hintType != "ability" ? true : !hintsModalOpen); setHintType("ability")}} 
+              onClick={() => {setShowHint(showHint && hintType != "ability" ? true : !showHint); setHintType("ability")}} 
             >
               Hint 1
             </button>
             {/* Pokedex Description */}
             <button 
-              onClick={() => {setHintsModalOpen(hintsModalOpen && hintType != "dex" ? true : !hintsModalOpen); setHintType("dex")}}
+              onClick={() => {setShowHint(showHint && hintType != "dex" ? true : !showHint); setHintType("dex")}}
             >
               Hint 2
             </button>
             {/* Blurry Silhouette */}
             <button 
-              onClick={() => {setHintsModalOpen(hintsModalOpen && hintType != "silhouette" ? true : !hintsModalOpen); setHintType("silhouette")}}
+              onClick={() => {setShowHint(showHint && hintType != "silhouette" ? true : !showHint); setHintType("silhouette")}}
             >
               Hint 3
             </button>
           </div>
           <Hints 
-              isOpen={hintsModalOpen}
+              isOpen={showHint}
               hintType={hintType}
               pokemon={dailyPokemon!}
           />
@@ -167,7 +173,7 @@ function App() {
 
         <div className='guess-list'>
           <div className='clue-labels'>
-            {clueLabels.map((clue, index) => <div key={`${index}-${clue}`}>{clue}</div>)}
+            {guesses.length ? clueLabels.map((clue, index) => <div key={`${index}-${clue}`}>{clue}</div>) : <div></div>}
           </div>
           <div>
             {guesses.map((pokemon, index) => 
