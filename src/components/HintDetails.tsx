@@ -2,13 +2,13 @@ import data from "../data/abilities.json";
 import { Pokemon } from "../App";
 import { getImgSrc } from "../utilities";
 
-interface HintsModalProps {
+interface HintDetailsProps {
     isOpen: boolean;
     hintType: string;
     pokemon: Pokemon;
 }
 
-const Hints = ({isOpen, hintType, pokemon} : HintsModalProps) => {
+const HintDetails = ({isOpen, hintType, pokemon} : HintDetailsProps) => {
 
     const allAbilities = data.abilities;
 
@@ -51,4 +51,4 @@ const Hints = ({isOpen, hintType, pokemon} : HintsModalProps) => {
     )
 }
 
-export default Hints
+export default HintDetails

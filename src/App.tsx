@@ -2,7 +2,7 @@ import data from './data/pokemon.json'
 import './App.css'
 import { useEffect, useState } from 'react';
 import { getDailyPokemon, getImgSrc } from './utilities';
-import Hints from './components/hints'
+import HintDetails from './components/HintDetails';
 
 export interface Pokemon {
   id: number,
@@ -157,7 +157,7 @@ function App() {
               Hint 3
             </button>
           </div>
-          <Hints 
+          <HintDetails 
               isOpen={showHint}
               hintType={hintType}
               pokemon={dailyPokemon!}
