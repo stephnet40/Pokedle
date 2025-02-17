@@ -78,12 +78,26 @@ li button img {
   margin: 20px auto;
 }
 
+.clue-labels {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
+  gap: 12px;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.clue-labels div {
+  width: 100px;
+  text-align: center;
+}
+
 .guess-list {
   margin: 50px auto;
 }
 
 .pokemon-clues {
-  display: flex;
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px 100px 100px 100px 100px;
   gap: 12px;
   align-items: center;
   margin: 20px auto;

@@ -47,6 +47,8 @@ function App() {
     }
   }
 
+  const clueLabels = ["Pokémon", "Type 1", "Type 2", "Evolution Stage", "Fully Evolved", "Color", "Height", "Weight"];
+
   const handleInputChange = (event: any) => {
     setSearchInput(event.target.value);
     handleSearch(event.target.value);
@@ -164,50 +166,55 @@ function App() {
         </div>
 
         <div className='guess-list'>
-          {guesses.map((pokemon, index) => 
-            <div key={`${index}-${pokemon}`} className='pokemon-clues'>
-              <div key={`${index}-${pokemon}-name`} className='pokemon-img'>
-                <img src={getImgSrc(pokemon.name)}></img>
+          <div className='clue-labels'>
+            {clueLabels.map((clue, index) => <div key={`${index}-${clue}`}>{clue}</div>)}
+          </div>
+          <div>
+            {guesses.map((pokemon, index) => 
+              <div key={`${index}-${pokemon}`} className='pokemon-clues'>
+                <div key={`${index}-${pokemon}-name`} className='pokemon-img'>
+                  <img src={getImgSrc(pokemon.name)}></img>
+                </div>
+                <div key={`${index}-${pokemon}-type1`}
+                    className={pokemon.type1 == dailyPokemon?.type1 ? 'correct' : 'wrong'}
+                >
+                  {formatTypes(pokemon.type1)}
+                </div>
+                <div key={`${index}-${pokemon}-type2`}
+                    className={pokemon.type2 == dailyPokemon?.type2 ? 'correct' : 'wrong'}
+                >
+                  {pokemon.type2 ? formatTypes(pokemon.type2) : "None"}
+                </div>
+                <div key={`${index}-${pokemon}-evolution-stage`}
+                    className={pokemon.evolutionStage == dailyPokemon?.evolutionStage ? 'correct' : 'wrong'}
+                >
+                  {pokemon.evolutionStage}
+                </div>
+                <div key={`${index}-${pokemon}-fully-evolved`}
+                    className={pokemon.fullyEvolved == dailyPokemon?.fullyEvolved ? 'correct' : 'wrong'}
+                >
+                  {pokemon.fullyEvolved ? "Yes" : "No"}
+                </div>
+                <div key={`${index}-${pokemon}-color`}
+                    className={compareColor(pokemon.color, dailyPokemon!.color)}
+                >
+                  {formatColors(pokemon.color)}
+                </div>
+                <div key={`${index}-${pokemon}-height`}
+                    className={pokemon.height == dailyPokemon?.height ? 'correct' : 'wrong'}
+                >
+                  {formatHeight(pokemon.height)}
+                  {pokemon.height != dailyPokemon!.height ? compareSize(pokemon.height, dailyPokemon!.height) : ''}
+                </div>
+                <div key={`${index}-${pokemon}-weight`}
+                    className={pokemon.weight == dailyPokemon?.weight ? 'correct' : 'wrong'}
+                >
+                  {formatWeight(pokemon.weight)}
+                  {pokemon.weight != dailyPokemon!.weight ? compareSize(pokemon.weight, dailyPokemon!.weight) : ''}
+                </div>
               </div>
-              <div key={`${index}-${pokemon}-type1`}
-                   className={pokemon.type1 == dailyPokemon?.type1 ? 'correct' : 'wrong'}
-              >
-                {formatTypes(pokemon.type1)}
-              </div>
-              <div key={`${index}-${pokemon}-type2`}
-                   className={pokemon.type2 == dailyPokemon?.type2 ? 'correct' : 'wrong'}
-              >
-                {pokemon.type2 ? formatTypes(pokemon.type2) : "None"}
-              </div>
-              <div key={`${index}-${pokemon}-evolution-stage`}
-                   className={pokemon.evolutionStage == dailyPokemon?.evolutionStage ? 'correct' : 'wrong'}
-              >
-                {pokemon.evolutionStage}
-              </div>
-              <div key={`${index}-${pokemon}-fully-evolved`}
-                  className={pokemon.fullyEvolved == dailyPokemon?.fullyEvolved ? 'correct' : 'wrong'}
-              >
-                {pokemon.fullyEvolved ? "Yes" : "No"}
-              </div>
-              <div key={`${index}-${pokemon}-color`}
-                   className={compareColor(pokemon.color, dailyPokemon!.color)}
-              >
-                {formatColors(pokemon.color)}
-              </div>
-              <div key={`${index}-${pokemon}-height`}
-                   className={pokemon.height == dailyPokemon?.height ? 'correct' : 'wrong'}
-              >
-                {formatHeight(pokemon.height)}
-                {pokemon.height != dailyPokemon!.height ? compareSize(pokemon.height, dailyPokemon!.height) : ''}
-              </div>
-              <div key={`${index}-${pokemon}-weight`}
-                   className={pokemon.weight == dailyPokemon?.weight ? 'correct' : 'wrong'}
-              >
-                {formatWeight(pokemon.weight)}
-                {pokemon.weight != dailyPokemon!.weight ? compareSize(pokemon.weight, dailyPokemon!.weight) : ''}
-              </div>
-            </div>
-          )}
+            )}
+          </div>
         </div>
       </div>
     </>
