@@ -1,7 +1,8 @@
 import data from './data/pokemon.json'
 import './App.css'
 import { useEffect, useState } from 'react';
-import { getDailyPokemon } from './utilities';
+import { getDailyPokemon, getImgSrc } from './utilities';
+import Hints from './components/hints'
 
 export interface Pokemon {
   id: number,
@@ -12,7 +13,9 @@ export interface Pokemon {
   fullyEvolved: boolean,
   color: string[],
   height: number,
-  weight: number
+  weight: number,
+  ability: string,
+  dex: string
 }
 
 function App() {
@@ -31,6 +34,8 @@ function App() {
   const [searchResults, setSearchResults] = useState<Pokemon[]>([]);
   const [currGuess, setCurrGuess] = useState<Pokemon>();
   const [guesses, setGuesses] = useState<Pokemon[]>([]);
+  const [hintsModalOpen, setHintsModalOpen] = useState<boolean>(false);
+  const [hintType, setHintType] = useState<string>("ability");
 
   const handleSearch = (searchTerm: string) => {
     if (searchTerm) {
@@ -60,18 +65,6 @@ function App() {
     setSearchInput('');
     setSearchResults([]);
   } 
-
-  const getImgSrc = (name: string) => {
-    if (name.includes("mime")) {
-      name = name.replace(". ", "-")
-    }
-
-    if (name.includes("'d")) {
-      name = name.replace("'", "")
-    }
-
-    return `sprites/${name}.png`;
-  }
 
   const formatName = (name: string) => {
     name = name.split(" ").map(x => x.replace(/^./, char => char.toUpperCase())).join(" ")
@@ -135,12 +128,26 @@ function App() {
         </div>
 
         <div className='hints'>
-          {/* Ability */}
-          <button>Hint 1</button>
-          {/* Pokedex Description */}
-          <button>Hint 2</button>
-          {/* Blurry Silhouette */}
-          <button>Hint 3</button>
+          <div></div>
+          <div className='hint-buttons'>
+            {/* Ability */}
+            <button onClick={() => {setHintsModalOpen(!hintsModalOpen); setHintType("ability")}}>
+              Hint 1
+            </button>
+            {/* Pokedex Description */}
+            <button onClick={() => {setHintsModalOpen(!hintsModalOpen); setHintType("dex")}}>
+              Hint 2
+            </button>
+            {/* Blurry Silhouette */}
+            <button onClick={() => {setHintsModalOpen(!hintsModalOpen); setHintType("silhouette")}}>
+              Hint 3
+            </button>
+          </div>
+          <Hints 
+              isOpen={hintsModalOpen}
+              hintType={hintType}
+              pokemon={dailyPokemon!}
+          />
         </div>
 
         <div className='win-message'>

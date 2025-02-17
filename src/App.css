@@ -51,10 +51,26 @@ li button img {
 }
 
 .hints {
+  margin-top: 20px;
+}
+
+.hint-buttons {
   display: flex;
   gap: 10px;
   justify-content: center;
-  margin-top: 20px;
+}
+
+.show-hint {
+  display: block;
+}
+
+.hide-hint {
+  display: none;
+}
+
+.silhouette img {
+  width: 60px;
+  filter: blur(3px) brightness(0);
 }
 
 .win-message {
