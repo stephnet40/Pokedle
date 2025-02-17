@@ -35,6 +35,7 @@ li button {
 
 li button img {
   width: 60px;
+  /* filter: blur(5px) brightness(0) - for hint*/
 }
 
 .header {
@@ -47,6 +48,13 @@ li button img {
   width: 350px;
   font-size: 20px;
   padding: 2px 8px;
+}
+
+.hints {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
 .win-message {

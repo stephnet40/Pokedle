@@ -134,6 +134,15 @@ function App() {
           </ul>
         </div>
 
+        <div className='hints'>
+          {/* Ability */}
+          <button>Hint 1</button>
+          {/* Pokedex Description */}
+          <button>Hint 2</button>
+          {/* Blurry Silhouette */}
+          <button>Hint 3</button>
+        </div>
+
         <div className='win-message'>
           {currGuess == dailyPokemon ? 
             <div>Correct!</div> :
