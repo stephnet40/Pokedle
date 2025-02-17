@@ -9,7 +9,9 @@
             "fullyEvolved": false,
             "color": ["green"],
             "height": 2.04,
-            "weight": 15.2
+            "weight": 15.2,
+            "ability": "overgrow",
+            "dex": "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON."
         },
         {
             "id": 2,
@@ -20,7 +22,9 @@
             "fullyEvolved": false,
             "color": ["green", "pink"],
             "height": 3.03,
-            "weight": 28.7
+            "weight": 28.7,
+            "ability": "overgrow",
+            "dex": "When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs."
         },
         {
             "id": 3,
@@ -31,7 +35,9 @@
             "fullyEvolved": true,
             "color": ["green", "pink"],
             "height": 6.07,
-            "weight": 220.5
+            "weight": 220.5,
+            "ability": "overgrow",
+            "dex": "The plant blooms when it is absorbing solar energy. It stays on the move to seek sunlight."
         },
         {
             "id": 4,
@@ -42,7 +48,9 @@
             "fullyEvolved": false,
             "color": ["orange"],
             "height": 2.00,
-            "weight": 18.7
+            "weight": 18.7,
+            "ability": "blaze",
+            "dex": "Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail."
         },
         {
             "id": 5,
@@ -53,7 +61,9 @@
             "fullyEvolved": false,
             "color": ["red"],
             "height": 3.07,
-            "weight": 41.9
+            "weight": 41.9,
+            "ability": "blaze",
+            "dex": "When it swings its burning tail, it elevates the temperature to unbearably high levels."
         },
         {
             "id": 6,
@@ -64,7 +74,9 @@
             "fullyEvolved": true,
             "color": ["orange"],
             "height": 5.07,
-            "weight": 199.5
+            "weight": 199.5,
+            "ability": "blaze",
+            "dex": "Spits fire that is hot enough to melt boulders. Known to cause forest fires unintentionally."
         },
         {
             "id": 7,
@@ -75,7 +87,9 @@
             "fullyEvolved": false,
             "color": ["blue", "brown"],
             "height": 1.08,
-            "weight": 19.8
+            "weight": 19.8,
+            "ability": "torrent",
+            "dex": "After birth, its back swells and hardens into a shell. Powerfully sprays foam from its mouth."
         },
         {
             "id": 8,
@@ -86,7 +100,9 @@
             "fullyEvolved": false,
             "color": ["blue", "brown"],
             "height": 3.03,
-            "weight": 49.6
+            "weight": 49.6,
+            "ability": "torrent",
+            "dex": "Often hides in water to stalk unwary prey. For swimming fast, it moves its ears to maintain balance."
         },
         {
             "id": 9,
@@ -97,7 +113,9 @@
             "fullyEvolved": true,
             "color": ["blue", "brown"],
             "height": 5.03,
-            "weight": 188.5
+            "weight": 188.5,
+            "ability": "torrent",
+            "dex": "A brutal Pokémon with pressurized water jets on its shell. They are used for high speed tackles."
         },
         {
             "id": 10,
@@ -108,7 +126,9 @@
             "fullyEvolved": false,
             "color": ["yellow", "green"],
             "height": 1.00,
-            "weight": 6.4
+            "weight": 6.4,
+            "ability": "shield-dust",
+            "dex": "Its short feet are tipped with suction pads that enable it to tirelessly climb slopes and walls."
         },
         {
             "id": 11,
@@ -119,7 +139,9 @@
             "fullyEvolved": false,
             "color": ["green"],
             "height": 2.04,
-            "weight": 21.8
+            "weight": 21.8,
+            "ability": "shed-skin",
+            "dex": "This Pokémon is vulnerable to attack while its shell is soft, exposing its weak and tender body."
         },
         {
             "id": 12,
@@ -130,7 +152,9 @@
             "fullyEvolved": true,
             "color": ["purple", "white"],
             "height": 3.07,
-            "weight": 70.5
+            "weight": 70.5,
+            "ability": "compound-eyes",
+            "dex": "In battle, it flaps its wings at high speed to release highly toxic dust into the air."
         },
         {
             "id": 13,
@@ -141,7 +165,9 @@
             "fullyEvolved": false,
             "color": ["brown"],
             "height": 1.00,
-            "weight": 7.1
+            "weight": 7.1,
+            "ability": "shield-dust",
+            "dex": "Often found in forests, eating leaves. It has a sharp venomous stinger on its head."
         },
         {
             "id": 14,
@@ -152,7 +178,9 @@
             "fullyEvolved": false,
             "color": ["yellow"],
             "height": 2.00,
-            "weight": 22.0
+            "weight": 22.0,
+            "ability": "shed-skin",
+            "dex": "Almost incapable of moving, this Pokémon can only harden its shell to protect itself from predators."
         },
         {
             "id": 15,
@@ -163,7 +191,9 @@
             "fullyEvolved": true,
             "color": ["yellow"],
             "height": 3.03,
-            "weight": 65.0
+            "weight": 65.0,
+            "ability": "swarm",
+            "dex": "Flies at high speed and attacks using its large venomous stingers on its forelegs and tail."
         },
         {
             "id": 16,
@@ -174,7 +204,9 @@
             "fullyEvolved": false,
             "color": ["brown"],
             "height": 1.00,
-            "weight": 4.0
+            "weight": 4.0,
+            "ability": "keen-eye",
+            "dex": "A common sight in forests and woods. It flaps its wings at ground level to kick up blinding sand."
         },
         {
             "id": 17,
@@ -185,7 +217,9 @@
             "fullyEvolved": false,
             "color": ["brown"],
             "height": 3.07,
-            "weight": 66.1
+            "weight": 66.1,
+            "ability": "keen-eye",
+            "dex": "Very protective of its sprawling territorial area, this Pokémon will fiercely peck at any intruder."
         },
         {
             "id": 18,
@@ -196,7 +230,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 4.11,
-            "weight": 87.1
+            "weight": 87.1,
+            "ability": "keen-eye",
+            "dex": "This Pokémon flies at Mach 2 speed, seeking prey. Its large talons are feared as wicked weapons."
         },
         {
             "id": 19,
@@ -207,7 +243,9 @@
             "fullyEvolved": false,
             "color": ["purple"],
             "height": 1.00,
-            "weight": 7.7
+            "weight": 7.7,
+            "ability": "run-away",
+            "dex": "Bites anything when it attacks. Small and very quick, it is a common sight in many places."
         },
         {
             "id": 20,
@@ -218,7 +256,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 2.04,
-            "weight": 40.8
+            "weight": 40.8,
+            "ability": "run-away",
+            "dex": "Its hind feet are webbed. They act as flippers, so it can swim in rivers and hunt for prey."
         },
         {
             "id": 21,
@@ -229,7 +269,9 @@
             "fullyEvolved": false,
             "color": ["red", "brown"],
             "height": 1.00,
-            "weight": 4.4
+            "weight": 4.4,
+            "ability": "keen-eye",
+            "dex": "Inept at flying high. However, it can fly around very fast to protect its territory."
         },
         {
             "id": 22,
@@ -240,7 +282,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 3.11,
-            "weight": 83.8
+            "weight": 83.8,
+            "ability": "keen-eye",
+            "dex": "With its huge and magnificent wings, it can keep aloft without ever having to land for rest."
         },
         {
             "id": 23,
@@ -251,7 +295,9 @@
             "fullyEvolved": false,
             "color": ["purple"],
             "height": 6.07,
-            "weight": 15.2
+            "weight": 15.2,
+            "ability": "intimidate",
+            "dex": "A very common sight in grassland, etc. It flicks its tongue in and out to sense danger in its surroundings."
         },
         {
             "id": 24,
@@ -262,7 +308,9 @@
             "fullyEvolved": true,
             "color": ["purple"],
             "height": 11.06,
-            "weight": 143.3
+            "weight": 143.3,
+            "ability": "intimidate",
+            "dex": "It is rumored that the ferocious warning markings on its belly differ from area to area."
         },
         {
             "id": 25,
@@ -273,7 +321,9 @@
             "fullyEvolved": false,
             "color": ["yellow"],
             "height": 1.04,
-            "weight": 13.2
+            "weight": 13.2,
+            "ability": "static",
+            "dex": "It keeps its tail raised to monitor its surroundings. If you yank its tail, it will try to bite you."
         },
         {
             "id": 26,
@@ -284,7 +334,9 @@
             "fullyEvolved": true,
             "color": ["orange", "yellow"],
             "height": 2.07,
-            "weight": 66.1
+            "weight": 66.1,
+            "ability": "static",
+            "dex": "Its long tail serves as a ground to protect itself from its own high voltage power."
         },
         {
             "id": 27,
@@ -295,7 +347,9 @@
             "fullyEvolved": false,
             "color": ["yellow"],
             "height": 2.00,
-            "weight": 26.5
+            "weight": 26.5,
+            "ability": "sand-veil",
+            "dex": "Its body is dry. When it gets cold at night, its hide is said to become coated with a fine dew."
         },
         {
             "id": 28,
@@ -306,7 +360,9 @@
             "fullyEvolved": true,
             "color": ["yellow", "brown"],
             "height": 3.03,
-            "weight": 65.0
+            "weight": 65.0,
+            "ability": "sand-veil",
+            "dex": "It is skilled at slashing enemies with its claws. If broken, they start to grow back in a day."
         },
         {
             "id": 29,
@@ -317,7 +373,9 @@
             "fullyEvolved": false,
             "color": ["blue"],
             "height": 1.04,
-            "weight": 15.4
+            "weight": 15.4,
+            "ability": "poison-point",
+            "dex": "A mild-mannered Pokémon that does not like to fight. Beware, its small horns secrete venom."
         },
         {
             "id": 30,
@@ -328,7 +386,9 @@
             "fullyEvolved": false,
             "color": ["blue"],
             "height": 2.07,
-            "weight": 44.1
+            "weight": 44.1,
+            "ability": "poison-point",
+            "dex": "When resting deep in its burrow, its thorns always retract. This is proof that it is relaxed."
         },
         {
             "id": 31,
@@ -339,7 +399,9 @@
             "fullyEvolved": true,
             "color": ["blue"],
             "height": 4.03,
-            "weight": 132.3
+            "weight": 132.3,
+            "ability": "poison-point",
+            "dex": "Tough scales cover the sturdy body of this Pokémon. It appears that the scales grow in cycles."
         },
         {
             "id": 32,
@@ -350,7 +412,9 @@
             "fullyEvolved": false,
             "color": ["purple"],
             "height": 1.08,
-            "weight": 19.8
+            "weight": 19.8,
+            "ability": "poison-point",
+            "dex": "Stiffens its ears to sense danger. The larger its horns, the more powerful its secreted venom."
         },
         {
             "id": 33,
@@ -361,7 +425,9 @@
             "fullyEvolved": false,
             "color": ["purple"],
             "height": 2.11,
-            "weight": 43.0
+            "weight": 43.0,
+            "ability": "poison-point",
+            "dex": "An aggressive Pokémon that is quick to attack. The horn on its head secretes a powerful venom."
         },
         {
             "id": 34,
@@ -372,7 +438,9 @@
             "fullyEvolved": true,
             "color": ["purple"],
             "height": 4.07,
-            "weight": 136.7
+            "weight": 136.7,
+            "ability": "poison-point",
+            "dex": "It uses its powerful tail in battle to smash, constrict, then break the prey's bones."
         },
         {
             "id": 35,
@@ -383,7 +451,9 @@
             "fullyEvolved": false,
             "color": ["pink"],
             "height": 2.00,
-            "weight": 16.5
+            "weight": 16.5,
+            "ability": "cute-charm",
+            "dex": "Its magical and cute appeal has many admirers. It is rare and found only in certain areas."
         },
         {
             "id": 36,
@@ -394,7 +464,9 @@
             "fullyEvolved": true,
             "color": ["pink"],
             "height": 4.03,
-            "weight": 88.2
+            "weight": 88.2,
+            "ability": "cute-charm",
+            "dex": "It has an acute sense of hearing. It can easily hear a pin being dropped nearly 1,100 yards away."
         },
         {
             "id": 37,
@@ -405,7 +477,9 @@
             "fullyEvolved": false,
             "color": ["orange"],
             "height": 2.00,
-            "weight": 21.8
+            "weight": 21.8,
+            "ability": "flash-fire",
+            "dex": "At the time of birth, it has just one tail. The tail splits from its tip as it grows older."
         },
         {
             "id": 38,
@@ -416,7 +490,9 @@
             "fullyEvolved": true,
             "color": ["yellow"],
             "height": 3.07,
-            "weight": 43.9
+            "weight": 43.9,
+            "ability": "flash-fire",
+            "dex": "According to an enduring legend, 9 noble saints were united and reincarnated as this Pokémon."
         },
         {
             "id": 39,
@@ -427,7 +503,9 @@
             "fullyEvolved": false,
             "color": ["pink"],
             "height": 1.08,
-            "weight": 12.1
+            "weight": 12.1,
+            "ability": "cute-charm",
+            "dex": "Uses its alluring eyes to enrapture its foe. It then sings a pleasing melody that lulls the foe to sleep."
         },
         {
             "id": 40,
@@ -438,7 +516,9 @@
             "fullyEvolved": true,
             "color": ["pink"],
             "height": 3.03,
-            "weight": 26.5
+            "weight": 26.5,
+            "ability": "cute-charm",
+            "dex": "Its body is full of elasticity. By inhaling deeply, it can continue to inflate itself without limit."
         },
         {
             "id": 41,
@@ -449,7 +529,9 @@
             "fullyEvolved": false,
             "color": ["blue", "purple"],
             "height": 2.07,
-            "weight": 16.5
+            "weight": 16.5,
+            "ability": "inner-focus",
+            "dex": "Forms colonies in perpetually dark places. Uses ultrasonic waves to identify and approach targets."
         },
         {
             "id": 42,
@@ -460,7 +542,9 @@
             "fullyEvolved": true,
             "color": ["blue", "purple"],
             "height": 5.03,
-            "weight": 121.3
+            "weight": 121.3,
+            "ability": "inner-focus",
+            "dex": "Once it strikes, it will not stop draining energy from the victim even if it gets too heavy to fly."
         },
         {
             "id": 43,
@@ -471,7 +555,9 @@
             "fullyEvolved": false,
             "color": ["green", "blue"],
             "height": 1.08,
-            "weight": 11.9
+            "weight": 11.9,
+            "ability": "chlorophyll",
+            "dex": "During the day, it keeps its face buried in the ground. At night, it wanders around sowing its seeds."
         },
         {
             "id": 44,
@@ -482,7 +568,9 @@
             "fullyEvolved": false,
             "color": ["orange", "blue"],
             "height": 2.07,
-            "weight": 19.0
+            "weight": 19.0,
+            "ability": "chlorophyll",
+            "dex": "The fluid that oozes from its mouth isn't drool. It is a nectar that is used to attract prey."
         },
         {
             "id": 45,
@@ -493,7 +581,9 @@
             "fullyEvolved": true,
             "color": ["red", "blue"],
             "height": 3.11,
-            "weight": 41.0
+            "weight": 41.0,
+            "ability": "chlorophyll",
+            "dex": "Flaps its broad flower petals to scatter its poisonous pollen. The flapping sound is very loud."
         },
         {
             "id": 46,
@@ -504,7 +594,9 @@
             "fullyEvolved": false,
             "color": ["red", "orange"],
             "height": 1.00,
-            "weight": 11.9
+            "weight": 11.9,
+            "ability": "effect-spore",
+            "dex": "Burrows to suck tree roots. The mushrooms on its back grow by drawing nutrients from the bug host."
         },
         {
             "id": 47,
@@ -515,7 +607,9 @@
             "fullyEvolved": true,
             "color": ["red", "orange"],
             "height": 3.03,
-            "weight": 65.0
+            "weight": 65.0,
+            "ability": "effect-spore",
+            "dex": "The bug host is drained of energy by the mushrooms on its back. They appear to do all the thinking."
         },
         {
             "id": 48,
@@ -526,7 +620,9 @@
             "fullyEvolved": false,
             "color": ["purple"],
             "height": 3.03,
-            "weight": 66.1
+            "weight": 66.1,
+            "ability": "compound-eyes",
+            "dex": "Lives in the shadows of tall trees where it eats insects. It is attracted by light at night."
         },
         {
             "id": 49,
@@ -537,7 +633,9 @@
             "fullyEvolved": true,
             "color": ["purple"],
             "height": 4.11,
-            "weight": 27.6
+            "weight": 27.6,
+            "ability": "shield-dust",
+            "dex": "The dust-like scales covering its wings are color coded to indicate the kinds of poison it has."
         },
         {
             "id": 50,
@@ -548,7 +646,9 @@
             "fullyEvolved": false,
             "color": ["brown"],
             "height": 0.08,
-            "weight": 1.8
+            "weight": 1.8,
+            "ability": "sand-veil",
+            "dex": "It prefers dark places. It spends most of its time underground, though it may pop up in caves."
         },
         {
             "id": 51,
@@ -559,7 +659,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 2.04,
-            "weight": 73.4
+            "weight": 73.4,
+            "ability": "sand-veil",
+            "dex": "In battle, it digs through the ground and strikes the unsuspecting foe from an unexpected direction."
         },
         {
             "id": 52,
@@ -570,7 +672,9 @@
             "fullyEvolved": false,
             "color": ["yellow"],
             "height": 1.04,
-            "weight": 9.3
+            "weight": 9.3,
+            "ability": "pickup",
+            "dex": "All it does is sleep during the daytime. At night, it patrols its territory with its eyes aglow."
         },
         {
             "id": 53,
@@ -581,7 +685,9 @@
             "fullyEvolved": true,
             "color": ["yellow"],
             "height": 3.03,
-            "weight": 70.5
+            "weight": 70.5,
+            "ability": "limber",
+            "dex": "Although its fur has many admirers, it is tough to raise as a pet because of its fickle meanness."
         },
         {
             "id": 54,
@@ -592,7 +698,9 @@
             "fullyEvolved": false,
             "color": ["yellow"],
             "height": 2.07,
-            "weight": 43.2
+            "weight": 43.2,
+            "ability": "damp",
+            "dex": "While lulling its enemies with its vacant look, this wily Pokémon will use psychokinetic powers."
         },
         {
             "id": 55,
@@ -603,7 +711,9 @@
             "fullyEvolved": true,
             "color": ["blue"],
             "height": 5.07,
-            "weight": 168.9
+            "weight": 168.9,
+            "ability": "damp",
+            "dex": "Its slim and long limbs end in broad flippers. They are used for swimming gracefully in lakes."
         },
         {
             "id": 56,
@@ -614,7 +724,9 @@
             "fullyEvolved": false,
             "color": ["brown"],
             "height": 1.08,
-            "weight": 61.7
+            "weight": 61.7,
+            "ability": "vital-spirit",
+            "dex": "Extremely quick to anger. It could be docile one moment then thrashing away the next instant."
         },
         {
             "id": 57,
@@ -625,7 +737,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 3.03,
-            "weight": 70.5
+            "weight": 70.5,
+            "ability": "vital-spirit",
+            "dex": "Always furious and tenacious to boot. It will not abandon chasing its quarry until it is caught."
         },
         {
             "id": 58,
@@ -636,7 +750,9 @@
             "fullyEvolved": false,
             "color": ["orange", "yellow"],
             "height": 2.04,
-            "weight": 41.9
+            "weight": 41.9,
+            "ability": "intimidate",
+            "dex": "Very protective of its territory. It will bark and bite to repel intruders from its space."
         },
         {
             "id": 59,
@@ -647,7 +763,9 @@
             "fullyEvolved": true,
             "color": ["orange", "yellow"],
             "height": 6.03,
-            "weight": 341.7
+            "weight": 341.7,
+            "ability": "intimidate",
+            "dex": "A Pokémon that has been admired since the past for its beauty. It runs agilely as if on wings."
         },
         {
             "id": 60,
@@ -658,7 +776,9 @@
             "fullyEvolved": false,
             "color": ["blue", "white"],
             "height": 2.00,
-            "weight": 27.3
+            "weight": 27.3,
+            "ability": "water-absorb",
+            "dex": "Its newly grown legs prevent it from running. It appears to prefer swimming than trying to stand."
         },
         {
             "id": 61,
@@ -669,7 +789,9 @@
             "fullyEvolved": false,
             "color": ["blue", "white"],
             "height": 3.03,
-            "weight": 44.1
+            "weight": 44.1,
+            "ability": "water-absorb",
+            "dex": "Capable of living in or out of water. When out of water, it sweats to keep its body slimy."
         },
         {
             "id": 62,
@@ -680,7 +802,9 @@
             "fullyEvolved": true,
             "color": ["blue", "white"],
             "height": 4.03,
-            "weight": 119.0
+            "weight": 119.0,
+            "ability": "water-absorb",
+            "dex": "Swims powerfully using all the muscles in its body. It can even overtake champion swimmers."
         },
         {
             "id": 63,
@@ -691,7 +815,9 @@
             "fullyEvolved": false,
             "color": ["yellow", "brown"],
             "height": 2.11,
-            "weight": 43.0
+            "weight": 43.0,
+            "ability": "synchronize",
+            "dex": "It sleeps for 18 hours a day. It uses a variety of extrasensory powers even while asleep."
         },
         {
             "id": 64,
@@ -702,7 +828,9 @@
             "fullyEvolved": false,
             "color": ["yellow", "brown"],
             "height": 4.03,
-            "weight": 124.6
+            "weight": 124.6,
+            "ability": "synchronize",
+            "dex": "It emits special alpha waves from its body that induce headaches just by being close by."
         },
         {
             "id": 65,
@@ -713,7 +841,9 @@
             "fullyEvolved": true,
             "color": ["yellow", "brown"],
             "height": 4.11,
-            "weight": 105.8
+            "weight": 105.8,
+            "ability": "synchronize",
+            "dex": "It does not like physical attacks very much. Instead, it freely uses extra-sensory powers to defeat foes."
         },
         {
             "id": 66,
@@ -724,7 +854,9 @@
             "fullyEvolved": false,
             "color": ["gray"],
             "height": 2.07,
-            "weight": 43.0
+            "weight": 43.0,
+            "ability": "guts",
+            "dex": "Loves to build its muscles. It trains in all styles of martial arts to become even stronger."
         },
         {
             "id": 67,
@@ -735,7 +867,9 @@
             "fullyEvolved": false,
             "color": ["gray"],
             "height": 4.11,
-            "weight": 155.4
+            "weight": 155.4,
+            "ability": "guts",
+            "dex": "Its formidable body never gets tired. It helps people by doing work such as the moving of heavy goods."
         },
         {
             "id": 68,
@@ -746,7 +880,9 @@
             "fullyEvolved": true,
             "color": ["gray"],
             "height": 5.03,
-            "weight": 286.6
+            "weight": 286.6,
+            "ability": "guts",
+            "dex": "Using its heavy muscles, it throws powerful punches that can send the victim clear over the horizon."
         },
         {
             "id": 69,
@@ -757,7 +893,9 @@
             "fullyEvolved": false,
             "color": ["yellow", "green"],
             "height": 2.04,
-            "weight": 8.8
+            "weight": 8.8,
+            "ability": "chlorophyll",
+            "dex": "Prefers hot and humid places. It ensnares tiny insects with its vines and devours them."
         },
         {
             "id": 70,
@@ -768,7 +906,9 @@
             "fullyEvolved": false,
             "color": ["yellow", "green"],
             "height": 3.03,
-            "weight": 14.1
+            "weight": 14.1,
+            "ability": "chlorophyll",
+            "dex": "When hungry, it swallows anything that moves. Its hapless prey is melted inside by strong acids."
         },
         {
             "id": 71,
@@ -779,7 +919,9 @@
             "fullyEvolved": true,
             "color": ["yellow", "green"],
             "height": 5.07,
-            "weight": 34.2
+            "weight": 34.2,
+            "ability": "chlorophyll",
+            "dex": "Said to live in huge colonies deep in jungles, although no one has ever returned from there."
         },
         {
             "id": 72,
@@ -790,7 +932,9 @@
             "fullyEvolved": false,
             "color": ["red", "blue"],
             "height": 2.11,
-            "weight": 100.3
+            "weight": 100.3,
+            "ability": "clear-body",
+            "dex": "Its eyes are as transparent as crystals. From them, it shoots mysterious beams of light."
         },
         {
             "id": 73,
@@ -801,7 +945,9 @@
             "fullyEvolved": true,
             "color": ["red", "blue"],
             "height": 5.03,
-            "weight": 121.3
+            "weight": 121.3,
+            "ability": "clear-body",
+            "dex": "The tentacles are normally kept short. On hunts, they are extended to ensnare and immobilize prey."
         },
         {
             "id": 74,
@@ -812,7 +958,9 @@
             "fullyEvolved": false,
             "color": ["gray"],
             "height": 1.04,
-            "weight": 44.1
+            "weight": 44.1,
+            "ability": "rock-head",
+            "dex": "Found in fields and mountains. Mistaking them for boulders, people often step or trip on them."
         },
         {
             "id": 75,
@@ -823,7 +971,9 @@
             "fullyEvolved": false,
             "color": ["gray"],
             "height": 3.03,
-            "weight": 231.5
+            "weight": 231.5,
+            "ability": "rock-head",
+            "dex": "Rolls down slopes to move. It rolls over any obstacle without slowing or changing its direction."
         },
         {
             "id": 76,
@@ -834,7 +984,9 @@
             "fullyEvolved": true,
             "color": ["brown", "gray"],
             "height": 4.07,
-            "weight": 661.4
+            "weight": 661.4,
+            "ability": "rock-head",
+            "dex": "Once it sheds its skin, its body turns tender and whitish. Its hide hardens when it's exposed to air."
         },
         {
             "id": 77,
@@ -845,7 +997,9 @@
             "fullyEvolved": false,
             "color": ["orange", "yellow"],
             "height": 3.03,
-            "weight": 66.1
+            "weight": 66.1,
+            "ability": "run-away",
+            "dex": "Capable of jumping incredibly high. Its hooves and sturdy legs absorb the impact of a hard landing."
         },
         {
             "id": 78,
@@ -856,7 +1010,9 @@
             "fullyEvolved": true,
             "color": ["orange", "yellow"],
             "height": 5.07,
-            "weight": 209.4
+            "weight": 209.4,
+            "ability": "run-away",
+            "dex": "Very competitive, this Pokémon will chase anything that moves fast in the hopes of racing it."
         },
         {
             "id": 79,
@@ -867,7 +1023,9 @@
             "fullyEvolved": false,
             "color": ["pink"],
             "height": 3.11,
-            "weight": 79.4
+            "weight": 79.4,
+            "ability": "oblivious",
+            "dex": "Incredibly slow and sluggish. It is quite content to loll about without worrying about the time."
         },
         {
             "id": 80,
@@ -878,7 +1036,9 @@
             "fullyEvolved": true,
             "color": ["pink", "gray"],
             "height": 5.03,
-            "weight": 173.1
+            "weight": 173.1,
+            "ability": "oblivious",
+            "dex": "The Shellder that is latched onto ________'s tail is said to feed on the host's left over scraps."
         },
         {
             "id": 81,
@@ -889,7 +1049,9 @@
             "fullyEvolved": false,
             "color": ["gray"],
             "height": 1.00,
-            "weight": 13.2
+            "weight": 13.2,
+            "ability": "magnet-pull",
+            "dex": "It is born with the ability to defy gravity. It floats in air on powerful electromagnetic waves."
         },
         {
             "id": 82,
@@ -900,7 +1062,9 @@
             "fullyEvolved": true,
             "color": ["gray"],
             "height": 3.03,
-            "weight": 132.3
+            "weight": 132.3,
+            "ability": "magnet-pull",
+            "dex": "Generates strange radio signals. It raises the temperature by 3.6F degrees within 3,300 feet."
         },
         {
             "id": 83,
@@ -911,7 +1075,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 2.07,
-            "weight": 33.1
+            "weight": 33.1,
+            "ability": "keen-eye",
+            "dex": "Lives where reedy plants grow. They are rarely seen, so it's thought their numbers are decreasing."
         },
         {
             "id": 84,
@@ -922,7 +1088,9 @@
             "fullyEvolved": false,
             "color": ["brown"],
             "height": 4.07,
-            "weight": 86.4
+            "weight": 86.4,
+            "ability": "run-away",
+            "dex": "Its short wings make flying difficult. Instead, this Pokémon runs at high speed on developed legs."
         },
         {
             "id": 85,
@@ -933,7 +1101,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 5.11,
-            "weight": 187.8
+            "weight": 187.8,
+            "ability": "run-away",
+            "dex": "An odd species that is rarely found. The three heads respectively represent joy, sadness, and anger."
         },
         {
             "id": 86,
@@ -944,7 +1114,9 @@
             "fullyEvolved": false,
             "color": ["white"],
             "height": 3.07,
-            "weight": 198.4
+            "weight": 198.4,
+            "ability": "thick-fat",
+            "dex": "The protruding horn on its head is very hard. It is used for bashing through thick ice."
         },
         {
             "id": 87,
@@ -955,7 +1127,9 @@
             "fullyEvolved": true,
             "color": ["white"],
             "height": 5.07,
-            "weight": 264.6
+            "weight": 264.6,
+            "ability": "thick-fat",
+            "dex": "Stores thermal energy in its body. Swims at a steady 8 knots even in intensely cold waters."
         },
         {
             "id": 88,
@@ -966,7 +1140,9 @@
             "fullyEvolved": false,
             "color": ["purple"],
             "height": 2.11,
-            "weight": 66.1
+            "weight": 66.1,
+            "ability": "stench",
+            "dex": "Appears in filthy areas. Thrives by sucking up polluted sludge that is pumped out of factories."
         },
         {
             "id": 89,
@@ -977,7 +1153,9 @@
             "fullyEvolved": true,
             "color": ["purple"],
             "height": 3.11,
-            "weight": 66.1
+            "weight": 66.1,
+            "ability": "stench",
+            "dex": "It is usually undetectable because it blends in with the ground. Touching it can cause terrible poisoning."
         },
         {
             "id": 90,
@@ -988,7 +1166,9 @@
             "fullyEvolved": false,
             "color": ["purple"],
             "height": 1.00,
-            "weight": 8.8
+            "weight": 8.8,
+            "ability": "shell-armor",
+            "dex": "Its hard shell repels any kind of attack. It is vulnerable only when its shell is open."
         },
         {
             "id": 91,
@@ -999,7 +1179,9 @@
             "fullyEvolved": true,
             "color": ["purple"],
             "height": 4.11,
-            "weight": 292.1
+            "weight": 292.1,
+            "ability": "shell-armor",
+            "dex": "When attacked, it launches its horns in quick volleys. Its innards have never been seen."
         },
         {
             "id": 92,
@@ -1010,7 +1192,9 @@
             "fullyEvolved": false,
             "color": ["purple"],
             "height": 4.03,
-            "weight": 0.2
+            "weight": 0.2,
+            "ability": "levitate",
+            "dex": "Almost invisible, this gaseous Pokémon cloaks the target and puts it to sleep without notice."
         },
         {
             "id": 93,
@@ -1021,7 +1205,9 @@
             "fullyEvolved": false,
             "color": ["purple"],
             "height": 5.03,
-            "weight": 0.2
+            "weight": 0.2,
+            "ability": "levitate",
+            "dex": "Because of its ability to slip through block walls, it is said to be from another dimension."
         },
         {
             "id": 94,
@@ -1032,7 +1218,9 @@
             "fullyEvolved": true,
             "color": ["purple"],
             "height": 4.11,
-            "weight": 89.3
+            "weight": 89.3,
+            "ability": "levitate",
+            "dex": "It is said to emerge from darkness to steal the lives of those who become lost in mountains."
         },
         {
             "id": 95,
@@ -1043,7 +1231,9 @@
             "fullyEvolved": true,
             "color": ["gray"],
             "height": 28.10,
-            "weight": 463.0
+            "weight": 463.0,
+            "ability": "rock-head",
+            "dex": "As it grows, the stone portions of its body harden to become similar to a diamond, but colored black."
         },
         {
             "id": 96,
@@ -1054,7 +1244,9 @@
             "fullyEvolved": false,
             "color": ["yellow", "brown"],
             "height": 3.03,
-            "weight": 71.4
+            "weight": 71.4,
+            "ability": "insomnia",
+            "dex": "If you sleep by it all the time, it will sometimes show you dreams it has eaten in the past."
         },
         {
             "id": 97,
@@ -1065,7 +1257,9 @@
             "fullyEvolved": true,
             "color": ["yellow"],
             "height": 5.03,
-            "weight": 166.7
+            "weight": 166.7,
+            "ability": "insomnia",
+            "dex": "When it locks eyes with an enemy, it will use a mix of PSI moves such as Hypnosis and Confusion."
         },
         {
             "id": 98,
@@ -1076,7 +1270,9 @@
             "fullyEvolved": false,
             "color": ["orange", "brown"],
             "height": 1.04,
-            "weight": 14.3
+            "weight": 14.3,
+            "ability": "hyper-cutter",
+            "dex": "Its pincers are not only powerful weapons, they are used for balance when walking sideways."
         },
         {
             "id": 99,
@@ -1087,7 +1283,9 @@
             "fullyEvolved": true,
             "color": ["orange", "brown"],
             "height": 4.03,
-            "weight": 132.3
+            "weight": 132.3,
+            "ability": "hyper-cutter",
+            "dex": "Its large and hard pincer has 10,000-horsepower strength. However, being so big, it is unwieldy to move."
         },
         {
             "id": 100,
@@ -1098,7 +1296,9 @@
             "fullyEvolved": false,
             "color": ["red", "white"],
             "height": 1.08,
-            "weight": 22.9
+            "weight": 22.9,
+            "ability": "soundproof",
+            "dex": "A life-form whose identity is unknown. It is said to Screech or suddenly SelfDestruct."
         },
         {
             "id": 101,
@@ -1109,7 +1309,9 @@
             "fullyEvolved": true,
             "color": ["red", "white"],
             "height": 3.11,
-            "weight": 146.8
+            "weight": 146.8,
+            "ability": "soundproof",
+            "dex": "It stores electric energy under very high pressure. It often explodes with little or no provocation."
         },
         {
             "id": 102,
@@ -1120,7 +1322,9 @@
             "fullyEvolved": false,
             "color": ["pink"],
             "height": 1.04,
-            "weight": 5.5
+            "weight": 5.5,
+            "ability": "chlorophyll",
+            "dex": "The heads attract each other and spin around. There must be 6 heads for it to maintain balance."
         },
         {
             "id": 103,
@@ -1131,7 +1335,9 @@
             "fullyEvolved": true,
             "color": ["green", "brown"],
             "height": 6.07,
-            "weight": 264.6
+            "weight": 264.6,
+            "ability": "chlorophyll",
+            "dex": "Its cries are very noisy. This is because each of the 3 heads thinks about whatever it likes."
         },
         {
             "id": 104,
@@ -1142,7 +1348,9 @@
             "fullyEvolved": false,
             "color": ["brown", "white"],
             "height": 1.04,
-            "weight": 14.3
+            "weight": 14.3,
+            "ability": "rock-head",
+            "dex": "Because it never removes its skull helmet, no one has ever seen this Pokémon's real face."
         },
         {
             "id": 105,
@@ -1153,7 +1361,9 @@
             "fullyEvolved": true,
             "color": ["brown", "white"],
             "height": 3.03,
-            "weight": 99.2
+            "weight": 99.2,
+            "ability": "rock-head",
+            "dex": "It is small and was originally very weak. Its temperament turned ferocious when it began using bones."
         },
         {
             "id": 106,
@@ -1164,7 +1374,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 4.11,
-            "weight": 109.8
+            "weight": 109.8,
+            "ability": "limber",
+            "dex": "When kicking, the sole of its foot turns as hard as a diamond on impact and destroys its enemy."
         },
         {
             "id": 107,
@@ -1175,7 +1387,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 4.07,
-            "weight": 110.7
+            "weight": 110.7,
+            "ability": "keen-eye",
+            "dex": "While apparently doing nothing, it fires punches in lightning fast volleys that are impossible to see."
         },
         {
             "id": 108,
@@ -1186,7 +1400,9 @@
             "fullyEvolved": true,
             "color": ["pink"],
             "height": 3.11,
-            "weight": 144.4
+            "weight": 144.4,
+            "ability": "own-tempo",
+            "dex": "Its tongue can be extended like a chameleon's. It leaves a tingling sensation when it licks enemies."
         },
         {
             "id": 109,
@@ -1197,7 +1413,9 @@
             "fullyEvolved": false,
             "color": ["purple"],
             "height": 2.00,
-            "weight": 2.2
+            "weight": 2.2,
+            "ability": "levitate",
+            "dex": "Because it stores several kinds of toxic gases in its body, it is prone to exploding without warning."
         },
         {
             "id": 110,
@@ -1208,7 +1426,9 @@
             "fullyEvolved": true,
             "color": ["purple"],
             "height": 3.11,
-            "weight": 20.9
+            "weight": 20.9,
+            "ability": "levitate",
+            "dex": "It lives and grows by absorbing dust, germs and poison gases that are contained in toxic waste and garbage."
         },
         {
             "id": 111,
@@ -1219,7 +1439,9 @@
             "fullyEvolved": false,
             "color": ["gray"],
             "height": 3.03,
-            "weight": 253.5
+            "weight": 253.5,
+            "ability": "lightning-rod",
+            "dex": "Its massive bones are 1000 times harder than human bones. It can easily knock a trailer flying."
         },
         {
             "id": 112,
@@ -1230,7 +1452,9 @@
             "fullyEvolved": true,
             "color": ["gray"],
             "height": 6.03,
-            "weight": 264.6
+            "weight": 264.6,
+            "ability": "lightning-rod",
+            "dex": "Protected by an armor-like hide, it is capable of living in molten lava of 3,600 degrees."
         },
         {
             "id": 113,
@@ -1241,7 +1465,9 @@
             "fullyEvolved": true,
             "color": ["pink"],
             "height": 3.07,
-            "weight": 76.3
+            "weight": 76.3,
+            "ability": "natural-cure",
+            "dex": "A rare and elusive Pokémon that is said to bring happiness to those who manage to get it."
         },
         {
             "id": 114,
@@ -1252,7 +1478,9 @@
             "fullyEvolved": true,
             "color": ["blue"],
             "height": 3.03,
-            "weight": 77.2
+            "weight": 77.2,
+            "ability": "chlorophyll",
+            "dex": "The whole body is swathed with wide vines that are similar to seaweed. Its vines shake as it walks."
         },
         {
             "id": 115,
@@ -1263,7 +1491,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 7.03,
-            "weight": 176.4
+            "weight": 176.4,
+            "ability": "early-bird",
+            "dex": "Raises its young in its belly pouch. Won't run from any fight to keep its young protected."
         },
         {
             "id": 116,
@@ -1274,7 +1504,9 @@
             "fullyEvolved": false,
             "color": ["blue"],
             "height": 1.04,
-            "weight": 17.6
+            "weight": 17.6,
+            "ability": "swift-swim",
+            "dex": "Known to shoot down flying bugs with precision blasts of ink from the surface of the water."
         },
         {
             "id": 117,
@@ -1285,7 +1517,9 @@
             "fullyEvolved": true,
             "color": ["blue"],
             "height": 3.11,
-            "weight": 55.1
+            "weight": 55.1,
+            "ability": "swift-swim",
+            "dex": "Its body bristles with sharp spikes. Carelessly trying to touch it could cause fainting from the spikes."
         },
         {
             "id": 118,
@@ -1296,7 +1530,9 @@
             "fullyEvolved": false,
             "color": ["orange", "white"],
             "height": 2.00,
-            "weight": 33.1
+            "weight": 33.1,
+            "ability": "swift-swim",
+            "dex": "Its dorsal and pectoral fins are strongly developed like muscles. It can swim at a speed of five knots."
         },
         {
             "id": 119,
@@ -1307,7 +1543,9 @@
             "fullyEvolved": true,
             "color": ["orange", "white"],
             "height": 4.03,
-            "weight": 86.0
+            "weight": 86.0,
+            "ability": "swift-swim",
+            "dex": "In the autumn spawning season, they can be seen swimming powerfully up rivers and creeks."
         },
         {
             "id": 120,
@@ -1318,7 +1556,9 @@
             "fullyEvolved": false,
             "color": ["yellow", "brown"],
             "height": 2.07,
-            "weight": 76.1
+            "weight": 76.1,
+            "ability": "illuminate",
+            "dex": "An enigmatic Pokémon that can effortlessly regenerate any appendage it loses in battle."
         },
         {
             "id": 121,
@@ -1329,7 +1569,9 @@
             "fullyEvolved": true,
             "color": ["red", "purple"],
             "height": 3.07,
-            "weight": 176.4
+            "weight": 176.4,
+            "ability": "illuminate",
+            "dex": "This Pokémon has a geometric body. Because of its body, the locals suspect that it is an alien creature."
         },
         {
             "id": 122,
@@ -1340,7 +1582,9 @@
             "fullyEvolved": true,
             "color": ["pink", "white"],
             "height": 4.03,
-            "weight": 120.2
+            "weight": 120.2,
+            "ability": "soundproof",
+            "dex": "It is adept at conning people. It is said to be able to create walls out of thin air by miming."
         },
         {
             "id": 123,
@@ -1351,7 +1595,9 @@
             "fullyEvolved": true,
             "color": ["green"],
             "height": 4.11,
-            "weight": 123.5
+            "weight": 123.5,
+            "ability": "swarm",
+            "dex": "With ninja-like agility and speed, it can create the illusion that there is more than one."
         },
         {
             "id": 124,
@@ -1362,7 +1608,9 @@
             "fullyEvolved": true,
             "color": ["red", "purple"],
             "height": 4.07,
-            "weight": 89.5
+            "weight": 89.5,
+            "ability": "oblivious",
+            "dex": "It speaks using a language that sounds human. Research is under way to determine what is being said."
         },
         {
             "id": 125,
@@ -1373,7 +1621,9 @@
             "fullyEvolved": true,
             "color": ["yellow", "black"],
             "height": 3.07,
-            "weight": 66.1
+            "weight": 66.1,
+            "ability": "static",
+            "dex": "Normally found near power plants, they can wander away and cause major blackouts in cities."
         },
         {
             "id": 126,
@@ -1384,7 +1634,9 @@
             "fullyEvolved": true,
             "color": ["orange", "yellow"],
             "height": 4.03,
-            "weight": 98.1
+            "weight": 98.1,
+            "ability": "flame-body",
+            "dex": "Its body always burns with an orange glow that enables it to hide perfectly among flames."
         },
         {
             "id": 127,
@@ -1395,7 +1647,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 4.11,
-            "weight": 121.3
+            "weight": 121.3,
+            "ability": "hyper-cutter",
+            "dex": "If it fails to crush the victim in its pincers, it will swing it around and toss it hard."
         },
         {
             "id": 128,
@@ -1406,7 +1660,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 4.07,
-            "weight": 194.9
+            "weight": 194.9,
+            "ability": "intimidate",
+            "dex": "A rowdy Pokémon with a lot of stamina. Once running, it won't stop until it hits something."
         },
         {
             "id": 129,
@@ -1417,7 +1673,9 @@
             "fullyEvolved": false,
             "color": ["orange"],
             "height": 2.11,
-            "weight": 22.0
+            "weight": 22.0,
+            "ability": "swift-swim",
+            "dex": "In the distant past, it was somewhat stronger than the horribly weak descendants that exist today."
         },
         {
             "id": 130,
@@ -1428,7 +1686,9 @@
             "fullyEvolved": true,
             "color": ["blue"],
             "height": 21.04,
-            "weight": 518.1
+            "weight": 518.1,
+            "ability": "intimidate",
+            "dex": "Rarely seen in the wild. Huge and vicious, it is capable of destroying entire cities in a rage."
         },
         {
             "id": 131,
@@ -1439,7 +1699,9 @@
             "fullyEvolved": true,
             "color": ["blue"],
             "height": 8.02,
-            "weight": 485.0
+            "weight": 485.0,
+            "ability": "water-absorb",
+            "dex": "Its high intelligence enables it to understand human speech. It likes to ferry people on its back."
         },
         {
             "id": 132,
@@ -1450,7 +1712,9 @@
             "fullyEvolved": true,
             "color": ["purple"],
             "height": 1.00,
-            "weight": 8.8
+            "weight": 8.8,
+            "ability": "limber",
+            "dex": "It can freely recombine its own cellular structure to transform into other life-forms."
         },
         {
             "id": 133,
@@ -1461,7 +1725,9 @@
             "fullyEvolved": false,
             "color": ["brown"],
             "height": 1.00,
-            "weight": 14.3
+            "weight": 14.3,
+            "ability": "run-away",
+            "dex": "Its genetic code is unstable, so it could evolve in a variety of ways. There are only a few alive."
         },
         {
             "id": 134,
@@ -1472,7 +1738,9 @@
             "fullyEvolved": true,
             "color": ["blue"],
             "height": 3.03,
-            "weight": 63.9
+            "weight": 63.9,
+            "ability": "water-absorb",
+            "dex": "Lives close to water. Its long tail is ridged with a fin which is often mistaken for a mermaid's."
         },
         {
             "id": 135,
@@ -1483,7 +1751,9 @@
             "fullyEvolved": true,
             "color": ["yellow"],
             "height": 2.07,
-            "weight": 54.0
+            "weight": 54.0,
+            "ability": "volt-absorb",
+            "dex": "It accumulates negative ions in the atmosphere to blast out 10000-volt lightning bolts."
         },
         {
             "id": 136,
@@ -1494,7 +1764,9 @@
             "fullyEvolved": true,
             "color": ["orange", "yellow"],
             "height": 2.11,
-            "weight": 55.1
+            "weight": 55.1,
+            "ability": "flash-fire",
+            "dex": "When storing thermal energy in its body, its temperature could soar to over 1600 degrees."
         },
         {
             "id": 137,
@@ -1505,7 +1777,9 @@
             "fullyEvolved": true,
             "color": ["blue", "pink"],
             "height": 2.07,
-            "weight": 80.5
+            "weight": 80.5,
+            "ability": "trace",
+            "dex": "The only Pokémon people anticipate can fly into space. None has managed the feat yet, however."
         },
         {
             "id": 138,
@@ -1516,7 +1790,9 @@
             "fullyEvolved": false,
             "color": ["blue", "brown"],
             "height": 1.04,
-            "weight": 16.5
+            "weight": 16.5,
+            "ability": "swift-swim",
+            "dex": "Although long extinct, in rare cases, it can be genetically resurrected from fossils."
         },
         {
             "id": 139,
@@ -1527,7 +1803,9 @@
             "fullyEvolved": true,
             "color": ["blue", "brown"],
             "height": 3.03,
-            "weight": 77.2
+            "weight": 77.2,
+            "ability": "swift-swim",
+            "dex": "Its tentacles are highly developed as if they are hands and feet. As soon as it ensnares prey, it bites."
         },
         {
             "id": 140,
@@ -1538,7 +1816,9 @@
             "fullyEvolved": false,
             "color": ["brown", "black"],
             "height": 1.08,
-            "weight": 25.4
+            "weight": 25.4,
+            "ability": "swift-swim",
+            "dex": "A Pokémon that was resurrected from a fossil found in what was once the ocean floor eons ago."
         },
         {
             "id": 141,
@@ -1549,7 +1829,9 @@
             "fullyEvolved": true,
             "color": ["brown"],
             "height": 4.03,
-            "weight": 89.3
+            "weight": 89.3,
+            "ability": "swift-swim",
+            "dex": "Its sleek shape is perfect for swimming. It slashes prey with its claws and drains the body fluids."
         },
         {
             "id": 142,
@@ -1560,7 +1842,9 @@
             "fullyEvolved": true,
             "color": ["purple"],
             "height": 5.11,
-            "weight": 130.1
+            "weight": 130.1,
+            "ability": "rock-head",
+            "dex": "A ferocious, prehistoric Pokémon that goes for the enemy's throat with its serrated saw-like fangs."
         },
         {
             "id": 143,
@@ -1571,7 +1855,9 @@
             "fullyEvolved": true,
             "color": ["blue", "white"],
             "height": 6.11,
-            "weight": 1014.1
+            "weight": 1014.1,
+            "ability": "immunity",
+            "dex": "Will eat anything, even if the food happens to be a little moldy. It never gets an upset stomach."
         },
         {
             "id": 144,
@@ -1582,7 +1868,9 @@
             "fullyEvolved": true,
             "color": ["blue"],
             "height": 5.07,
-            "weight": 122.1
+            "weight": 122.1,
+            "ability": "pressure",
+            "dex": "A legendary bird Pokémon that is said to appear to doomed people who are lost in icy mountains."
         },
         {
             "id": 145,
@@ -1593,7 +1881,9 @@
             "fullyEvolved": true,
             "color": ["yellow"],
             "height": 5.03,
-            "weight": 116.0
+            "weight": 116.0,
+            "ability": "pressure",
+            "dex": "A legendary bird Pokémon that is said to appear from clouds while dropping enormous lightning bolts."
         },
         {
             "id": 146,
@@ -1604,7 +1894,9 @@
             "fullyEvolved": true,
             "color": ["red", "orange"],
             "height": 6.07,
-            "weight": 132.3
+            "weight": 132.3,
+            "ability": "pressure",
+            "dex": "A legendary bird Pokémon. As it flaps its flaming wings, even the night sky will turn red."
         },
         {
             "id": 147,
@@ -1615,7 +1907,9 @@
             "fullyEvolved": false,
             "color": ["blue", "white"],
             "height": 5.11,
-            "weight": 7.3
+            "weight": 7.3,
+            "ability": "shed-skin",
+            "dex": "Even the young can exceed 6.5 feet in length. It grows larger by repeatedly shedding skin."
         },
         {
             "id": 148,
@@ -1626,7 +1920,9 @@
             "fullyEvolved": false,
             "color": ["blue", "white"],
             "height": 13.01,
-            "weight": 36.4
+            "weight": 36.4,
+            "ability": "shed-skin",
+            "dex": "It is said to live in seas and lakes. Even though it has no wings, it has been seen flying occasionally."
         },
         {
             "id": 149,
@@ -1637,7 +1933,9 @@
             "fullyEvolved": true,
             "color": ["orange"],
             "height": 7.03,
-            "weight": 463.0
+            "weight": 463.0,
+            "ability": "inner-focus",
+            "dex": "An extremely rarely seen marine Pokémon. Its intelligence is said to match that of humans."
         },
         {
             "id": 150,
@@ -1648,7 +1946,9 @@
             "fullyEvolved": true,
             "color": ["purple"],
             "height": 6.07,
-            "weight": 269.0
+            "weight": 269.0,
+            "ability": "pressure",
+            "dex": "A Pokémon whose genetic code was repeatedly recombined for research. It turned vicious as a result."
         },
         {
             "id": 151,
@@ -1659,7 +1959,9 @@
             "fullyEvolved": true,
             "color": ["pink"],
             "height": 1.04,
-            "weight": 8.8
+            "weight": 8.8,
+            "ability": "synchronize",
+            "dex": "So rare that it is still said to be a mirage by many experts. Only a few people have seen it worldwide."
         }
     ]
 }
