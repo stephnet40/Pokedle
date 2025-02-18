@@ -91,6 +91,14 @@ function App() {
     if (hintsUnlocked == 1) return 7 - guesses.length;
     return 4 - guesses.length;
   }
+
+  const getUsedHints = (hintNum: number) => {
+    if (!hintsUsed[hintNum]) {
+      const updateHints = hintsUsed;
+      updateHints[hintNum] = true;
+      setHintsUsed(updateHints);
+    }
+  }
   
   return (
     <>
@@ -124,21 +132,33 @@ function App() {
           <div className='hint-buttons'>
             {/* Ability */}
             <button 
-              onClick={() => {setShowHint(showHint && hintType != "ability" ? true : !showHint); setHintType("ability")}} 
+              onClick={() => {
+                setShowHint(showHint && hintType != "ability" ? true : !showHint); 
+                setHintType("ability");
+                getUsedHints(0);
+              }} 
               disabled={guesses.length < 4}
             >
               {guesses.length < 4 ? "Hint 1" : "Ability"}
             </button>
             {/* Pokedex Description */}
             <button 
-              onClick={() => {setShowHint(showHint && hintType != "dex" ? true : !showHint); setHintType("dex")}}
+              onClick={() => {
+                setShowHint(showHint && hintType != "dex" ? true : !showHint); 
+                setHintType("dex");
+                getUsedHints(1);
+              }}
               disabled={guesses.length < 7}
             >
               {guesses.length < 7 ? "Hint 2" : "Dex Entry"}
             </button>
             {/* Blurry Silhouette */}
             <button 
-              onClick={() => {setShowHint(showHint && hintType != "silhouette" ? true : !showHint); setHintType("silhouette")}}
+              onClick={() => {
+                setShowHint(showHint && hintType != "silhouette" ? true : !showHint); 
+                setHintType("silhouette");
+                getUsedHints(2);
+              }}
               disabled={guesses.length < 10}
             >
               {guesses.length < 10 ? "Hint 3" : "Silhouette"}
