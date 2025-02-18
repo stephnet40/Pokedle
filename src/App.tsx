@@ -1,7 +1,7 @@
 import data from './data/pokemon.json'
 import './App.css'
 import { useEffect, useState } from 'react';
-import { getDailyPokemon, getImgSrc } from './utilities';
+import { compareColor, compareSize, formatColors, formatHeight, formatName, formatTypes, formatWeight, getDailyPokemon, getImgSrc } from './utilities';
 import HintDetails from './components/HintDetails';
 
 export interface Pokemon {
@@ -26,17 +26,35 @@ function App() {
     setDailyPokemon(data);
   }
 
-  useEffect(() => {
-    getDailyPokemon({allPokemon, generateDailyPokemon});
-  }, []);
-
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState<string>('');
   const [searchResults, setSearchResults] = useState<Pokemon[]>([]);
   const [currGuess, setCurrGuess] = useState<Pokemon>();
   const [guesses, setGuesses] = useState<Pokemon[]>([]);
   const [showHint, setShowHint] = useState<boolean>(false);
   const [hintType, setHintType] = useState<string>("ability");
+  const [hintsUnlocked, setHintsUnlocked] = useState<number>(0);
+  const [hintsUsed, setHintsUsed] = useState<boolean[]>(new Array(3).fill(false))
 
+  useEffect(() => {
+    getDailyPokemon({allPokemon, generateDailyPokemon});
+  }, []);
+
+  useEffect(() => {
+    switch (guesses.length) {
+      case 4:
+        setHintsUnlocked(1);
+        break;
+      case 7:
+        setHintsUnlocked(2);
+        break;
+      case 10:
+        setHintsUnlocked(3);
+        break;
+      default:
+        break;
+    }
+  }, [guesses.length]);
+  
   const handleSearch = (searchTerm: string) => {
     if (searchTerm) {
       const searchLength = searchTerm.length;
@@ -68,44 +86,10 @@ function App() {
     setSearchResults([]);
   } 
 
-  const formatName = (name: string) => {
-    name = name.split(" ").map(x => x.replace(/^./, char => char.toUpperCase())).join(" ")
-    name = name.replace(/\-f$|\-m$/, char => char == "-f" ? " ♀" : " ♂");
-    return name;
-  }
-
-  const formatTypes = (type: string) => {
-    return type.replace(/^./, char => char.toUpperCase());
-  }
-
-  const formatColors = (colors: string[]) => {
-    return colors.map(x => x.replace(/^./, char => char.toUpperCase())).join(", ");
-  }
-
-  const formatHeight = (height: number) => {
-    const heightArr = height.toFixed(2).toString().split('.');
-    return `${heightArr[0]}'${heightArr[1]}"`
-  }
-
-  const formatWeight = (weight: number) => {
-    return `${weight.toFixed(1)} lbs`
-  }
-
-  const compareColor = (colors: string[], correctColors: string[]) => {
-    let matching: string[] = [];
-
-    colors.forEach(color => {
-      if (correctColors.includes(color)) matching.push(color);
-    })
-
-    if (matching.length == 0) return "wrong";
-    if (matching.length == correctColors.length) return "correct";
-    return "partial";
-  }
-
-  const compareSize = (size: number, correctSize: number) => {
-    if (size > correctSize) return "⟱";
-    return "⟰"
+  const getNextHintUnlock = () => {
+    if (hintsUnlocked == 2) return 10 - guesses.length;
+    if (hintsUnlocked == 1) return 7 - guesses.length;
+    return 4 - guesses.length;
   }
   
   return (
@@ -136,25 +120,28 @@ function App() {
         </div>
 
         <div className='hints'>
-          <div></div>
+          <div>{hintsUnlocked < 3 ? `Next hint unlocked in ${getNextHintUnlock()} guesses.` : ""}</div>
           <div className='hint-buttons'>
             {/* Ability */}
             <button 
               onClick={() => {setShowHint(showHint && hintType != "ability" ? true : !showHint); setHintType("ability")}} 
+              disabled={guesses.length < 4}
             >
-              Hint 1
+              {guesses.length < 4 ? "Hint 1" : "Ability"}
             </button>
             {/* Pokedex Description */}
             <button 
               onClick={() => {setShowHint(showHint && hintType != "dex" ? true : !showHint); setHintType("dex")}}
+              disabled={guesses.length < 7}
             >
-              Hint 2
+              {guesses.length < 7 ? "Hint 2" : "Dex Entry"}
             </button>
             {/* Blurry Silhouette */}
             <button 
               onClick={() => {setShowHint(showHint && hintType != "silhouette" ? true : !showHint); setHintType("silhouette")}}
+              disabled={guesses.length < 10}
             >
-              Hint 3
+              {guesses.length < 10 ? "Hint 3" : "Silhouette"}
             </button>
           </div>
           <HintDetails 
