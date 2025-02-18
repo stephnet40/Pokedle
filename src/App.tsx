@@ -108,25 +108,6 @@ function App() {
           <h2>A Wordle-inspired Pokemon Guessing Game</h2>
         </div>
 
-        <div className='search'>
-          <input type='text' placeholder='Search for Pokémon' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
-          <ul className='filtered-search'>
-            {searchResults.map((result, index) => 
-              <li key={index}>
-                <button key={`${index}-btn`} onClick={() => selectPokemon(result)}>
-                  <img src={getImgSrc(result.name)}></img>
-                  {formatName(result.name)}
-                </button>
-              </li>)}
-            {searchInput.length && !searchResults.length ? 
-              <li className='empty-list'>
-                <button>No Pokemon found</button>
-              </li> :
-              <li></li>
-            }
-          </ul>
-        </div>
-
         <div className='hints'>
           <div>{hintsUnlocked < 3 ? `Next hint unlocked in ${getNextHintUnlock()} guesses.` : ""}</div>
           <div className='hint-buttons'>
@@ -169,6 +150,25 @@ function App() {
               hintType={hintType}
               pokemon={dailyPokemon!}
           />
+        </div>
+
+        <div className='search'>
+          <input type='text' placeholder='Search for Pokémon' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
+          <ul className='filtered-search'>
+            {searchResults.map((result, index) => 
+              <li key={index}>
+                <button key={`${index}-btn`} onClick={() => selectPokemon(result)}>
+                  <img src={getImgSrc(result.name)}></img>
+                  {formatName(result.name)}
+                </button>
+              </li>)}
+            {searchInput.length && !searchResults.length ? 
+              <li className='empty-list'>
+                <button>No Pokemon found</button>
+              </li> :
+              <li></li>
+            }
+          </ul>
         </div>
 
         <div className='win-message'>
