@@ -28,7 +28,7 @@ h2 {
   border-radius: 5px;
 }
 
-.pokemon-img, .silhouette {
+.pokemon-img {
   background-color: white;
 }
 
@@ -42,6 +42,9 @@ h2 {
 
 /* Search */
 ul {
+  height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: absolute;
   left: 36.05%;
   z-index: 1;
@@ -104,6 +107,14 @@ li button img {
 
 .show-hint {
   display: block;
+  background-color: rgb(255, 251, 251);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.ability div:first-child {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .silhouette img {
@@ -124,20 +135,23 @@ li button img {
 
 .clue-labels, .pokemon-clues {
   display: grid;
-  grid-template-columns: 80px 80px 80px 80px 80px 80px 80px 80px;
+  grid-template-columns: 70px 70px 70px 70px 70px 70px 70px 70px;
   gap: 12px;
   align-items: center;
   margin: 20px auto;
 }
 
 .clue-labels div {
-  width: 80px;
-  text-align: center;
+  height: 70px;
+  width: 70px;
+  place-content: center;
+  border-bottom: 4px solid rgba(58, 58, 58, 0.87);
+  padding-bottom: 5px;
 }
 
 .pokemon-clues div {
-  height: 80px;
-  width: 80px;
+  height: 70px;
+  width: 70px;
 }
 
 .correct {
