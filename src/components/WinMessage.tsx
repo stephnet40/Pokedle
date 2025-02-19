@@ -1,4 +1,3 @@
-import { Pokemon } from "../App";
 import { formatName, getImgSrc } from "../utilities";
 
 interface WinMessageProps {
