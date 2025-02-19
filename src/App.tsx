@@ -3,6 +3,7 @@ import './App.css'
 import { useEffect, useState } from 'react';
 import { compareColor, compareSize, formatColors, formatHeight, formatName, formatTypes, formatWeight, getDailyPokemon, getImgSrc } from './utilities';
 import HintDetails from './components/HintDetails';
+import WinMessage from './components/WinMessage';
 
 export interface Pokemon {
   id: number,
@@ -21,7 +22,7 @@ export interface Pokemon {
 function App() {
 
   const [allPokemon, setAllPokemon] = useState<Pokemon[]>(data.pokemon);
-  const [dailyPokemon, setDailyPokemon] = useState<Pokemon>();
+  const [dailyPokemon, setDailyPokemon] = useState<Pokemon>(data.pokemon[0]);
   const generateDailyPokemon = (data: any) => {
     setDailyPokemon(data);
   }
@@ -108,74 +109,73 @@ function App() {
           <h2>A Wordle-inspired Pokemon Guessing Game</h2>
         </div>
 
-        <div className='hints'>
-          <div>{hintsUnlocked < 3 ? `Next hint unlocked in ${getNextHintUnlock()} guesses.` : ""}</div>
-          <div className='hint-buttons'>
-            {/* Ability */}
-            <button 
-              onClick={() => {
-                setShowHint(showHint && hintType != "ability" ? true : !showHint); 
-                setHintType("ability");
-                getUsedHints(0);
-              }} 
-              disabled={guesses.length < 4}
-            >
-              {guesses.length < 4 ? "Hint 1" : "Ability"}
-            </button>
-            {/* Pokedex Description */}
-            <button 
-              onClick={() => {
-                setShowHint(showHint && hintType != "dex" ? true : !showHint); 
-                setHintType("dex");
-                getUsedHints(1);
-              }}
-              disabled={guesses.length < 7}
-            >
-              {guesses.length < 7 ? "Hint 2" : "Dex Entry"}
-            </button>
-            {/* Blurry Silhouette */}
-            <button 
-              onClick={() => {
-                setShowHint(showHint && hintType != "silhouette" ? true : !showHint); 
-                setHintType("silhouette");
-                getUsedHints(2);
-              }}
-              disabled={guesses.length < 10}
-            >
-              {guesses.length < 10 ? "Hint 3" : "Silhouette"}
-            </button>
+        <div className={currGuess == dailyPokemon ? 'hide' : ''}>
+          <div className='hints'>
+            <div>{hintsUnlocked < 3 ? `Next hint unlocked in ${getNextHintUnlock()} guesses.` : ""}</div>
+            <div className='hint-buttons'>
+              {/* Ability */}
+              <button 
+                onClick={() => {
+                  setShowHint(showHint && hintType != "ability" ? true : !showHint); 
+                  setHintType("ability");
+                  getUsedHints(0);
+                }} 
+                disabled={guesses.length < 4}
+              >
+                {guesses.length < 4 ? "Hint 1" : "Ability"}
+              </button>
+              {/* Pokedex Description */}
+              <button 
+                onClick={() => {
+                  setShowHint(showHint && hintType != "dex" ? true : !showHint); 
+                  setHintType("dex");
+                  getUsedHints(1);
+                }}
+                disabled={guesses.length < 7}
+              >
+                {guesses.length < 7 ? "Hint 2" : "Dex Entry"}
+              </button>
+              {/* Blurry Silhouette */}
+              <button 
+                onClick={() => {
+                  setShowHint(showHint && hintType != "silhouette" ? true : !showHint); 
+                  setHintType("silhouette");
+                  getUsedHints(2);
+                }}
+                disabled={guesses.length < 10}
+              >
+                {guesses.length < 10 ? "Hint 3" : "Silhouette"}
+              </button>
+            </div>
+            <HintDetails 
+                isOpen={showHint}
+                hintType={hintType}
+                pokemon={dailyPokemon!}
+            />
           </div>
-          <HintDetails 
-              isOpen={showHint}
-              hintType={hintType}
-              pokemon={dailyPokemon!}
-          />
+
+          <div className='search'>
+            <input type='text' placeholder='Search for Pokémon' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
+            <ul className='filtered-search'>
+              {searchResults.map((result, index) => 
+                <li key={index}>
+                  <button key={`${index}-btn`} onClick={() => selectPokemon(result)}>
+                    <img src={getImgSrc(result.name)}></img>
+                    {formatName(result.name)}
+                  </button>
+                </li>)}
+              {searchInput.length && !searchResults.length ? 
+                <li className='empty-list'>
+                  <button>No Pokemon found</button>
+                </li> :
+                <li></li>
+              }
+            </ul>
+          </div>
         </div>
 
-        <div className='search'>
-          <input type='text' placeholder='Search for Pokémon' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
-          <ul className='filtered-search'>
-            {searchResults.map((result, index) => 
-              <li key={index}>
-                <button key={`${index}-btn`} onClick={() => selectPokemon(result)}>
-                  <img src={getImgSrc(result.name)}></img>
-                  {formatName(result.name)}
-                </button>
-              </li>)}
-            {searchInput.length && !searchResults.length ? 
-              <li className='empty-list'>
-                <button>No Pokemon found</button>
-              </li> :
-              <li></li>
-            }
-          </ul>
-        </div>
-
-        <div className='win-message'>
-          {currGuess == dailyPokemon ? 
-            <div>Correct!</div> :
-            <div></div>
-          }
+        <div className={currGuess == dailyPokemon ? '' : 'hide'}>
+          <WinMessage hintsUsed={hintsUsed} numGuesses={guesses.length} pokemonName={dailyPokemon!.name} />
         </div>
 
         <div className='guess-list'>

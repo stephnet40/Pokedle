@@ -12,6 +12,34 @@ h2 {
   font-size: 20px;
 }
 
+.hints, .win-message {
+  width: 350px;
+  background-color: #3c75fb86;
+  outline: 4px solid rgb(250, 218, 7);
+  border: 4px solid rgba(255, 255, 255, 0.813);
+  border-radius: 10px;
+  padding: 2% 3%;
+  margin: 20px auto;
+}
+
+.pokemon-clues div, .win-message .pokemon-img {
+  place-content: center;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.pokemon-img, .silhouette {
+  background-color: white;
+}
+
+.pokemon-img img {
+  width: 100%;
+}
+
+.hide {
+  display: none;
+}
+
 /* Search */
 ul {
   position: absolute;
@@ -60,15 +88,6 @@ li button img {
 }
 
 /* Hints */
-.hints {
-  width: 350px;
-  background-color: #3c75fb86;
-  outline: 4px solid rgb(250, 218, 7);
-  border: 4px solid rgba(255, 255, 255, 0.813);
-  border-radius: 10px;
-  padding: 2% 3%;
-  margin: 20px auto;
-}
 
 .hints > div:first-child {
   font-size: 12px;
@@ -85,10 +104,6 @@ li button img {
 
 .show-hint {
   display: block;
-}
-
-.hide-hint {
-  display: none;
 }
 
 .silhouette img {
@@ -123,17 +138,6 @@ li button img {
 .pokemon-clues div {
   height: 80px;
   width: 80px;
-  place-content: center;
-  border: 1px solid black;
-  border-radius: 5px;
-}
-
-.pokemon-img {
-  background-color: white;
-}
-
-.pokemon-clues div img {
-  width: 90%;
 }
 
 .correct {
@@ -146,5 +150,34 @@ li button img {
 
 .partial {
   background-color: rgba(235, 195, 121, 0.85);
+}
+
+/* Win Message */
+.win-message {
+  font-size: 16px;
+}
+
+.win-message > div:first-child {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.win-message > div:last-child {
+  text-align: left;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.win-message > div:last-child div:first-child {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.win-message .pokemon-img {
+  height: 100px;
+  width: 100px;
 }
 

@@ -45,7 +45,7 @@ const HintDetails = ({isOpen, hintType, pokemon} : HintDetailsProps) => {
     }
 
     return (
-            <div className={isOpen ? "show-hint" : "hide-hint"}>
+            <div className={isOpen ? "show-hint" : "hide"}>
                 {displayHint(hintType)}
             </div>
     )
