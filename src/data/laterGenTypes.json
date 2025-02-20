@@ -1,0 +1,14 @@
+{
+    "gen2": [
+        {
+            "name": "magnemite",
+            "type1": "electric",
+            "type2": "steel"
+        },
+        {
+            "name": "magneton",
+            "type1": "electric",
+            "type2": "steel"
+        }
+    ]
+}

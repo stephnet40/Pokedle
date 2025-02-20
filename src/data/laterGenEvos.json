@@ -1,0 +1,79 @@
+{
+    "gen2": [   
+        {
+            "name": "pikachu",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "raichu",
+            "evolutionStage": 3,
+            "fullyEvolved": true
+        },
+        {
+            "name": "clefairy",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "clefable",
+            "evolutionStage": 3,
+            "fullyEvolved": true
+        },
+        {
+            "name": "jigglypuff",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "wigglytuff",
+            "evolutionStage": 3,
+            "fullyEvolved": true
+        },
+        {
+            "name": "golbat",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "onix",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "chansey",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "seadra",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "scyther",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "jynx",
+            "evolutionStage": 2,
+            "fullyEvolved": true
+        },
+        {
+            "name": "electabuzz",
+            "evolutionStage": 2,
+            "fullyEvolved": true
+        },
+        {
+            "name": "magmar",
+            "evolutionStage": 2,
+            "fullyEvolved": true
+        },
+        {
+            "name": "porygon",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        }
+    ]
+}
