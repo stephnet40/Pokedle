@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { compareColor, compareSize, formatColors, formatHeight, formatName, formatTypes, formatWeight, getDailyPokemon, getImgSrc } from './utilities';
 import HintDetails from './components/HintDetails';
 import WinMessage from './components/WinMessage';
+import GenerationSelect from './components/GenerationSelect';
 
 export interface Pokemon {
   id: number,
@@ -20,6 +21,11 @@ export interface Pokemon {
 }
 
 function App() {
+
+  const [selectedGens, setSelectedGens] = useState<boolean[]>(new Array(9).fill(true));
+  const updateSelectedGens = (data: any) => {
+    setSelectedGens([...data]);
+  }
 
   const [allPokemon, setAllPokemon] = useState<Pokemon[]>(data.pokemon);
   const [dailyPokemon, setDailyPokemon] = useState<Pokemon>(data.pokemon[0]);
@@ -109,6 +115,11 @@ function App() {
           <h2>A Wordle-inspired Pokemon Guessing Game</h2>
         </div>
 
+        <GenerationSelect 
+          selectedGens={selectedGens}
+          updateSelectedGens={updateSelectedGens}
+        />
+        
         <div className={currGuess == dailyPokemon ? 'hide' : ''}>
           <div className='hints'>
             <div>{hintsUnlocked < 3 ? `Next hint unlocked in ${getNextHintUnlock()} guesses.` : ""}</div>
@@ -180,7 +191,7 @@ function App() {
 
         <div className='guess-list'>
           <div className='clue-labels'>
-            {guesses.length ? clueLabels.map((clue, index) => <div key={`${index}-${clue}`}>{clue}</div>) : <div></div>}
+            {guesses.length ? clueLabels.map((clue, index) => <div key={`${index}-${clue}`} className='label'>{clue}</div>) : <div></div>}
           </div>
           <div>
             {guesses.map((pokemon, index) => 

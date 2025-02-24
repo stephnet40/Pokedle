@@ -40,6 +40,21 @@ h2 {
   display: none;
 }
 
+/* Generation Select */
+.gen-select button {
+  width: 50px;
+  background-color: transparent;
+  border: none;
+}
+
+.gen-select button img {
+  width: 100%;
+}
+
+.not-selected {
+  filter: grayscale(100%)
+}
+
 /* Search */
 ul {
   height: 400px;
@@ -141,7 +156,7 @@ li button img {
   margin: 20px auto;
 }
 
-.clue-labels div {
+.clue-labels label {
   height: 70px;
   width: 70px;
   place-content: center;
