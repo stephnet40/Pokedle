@@ -75,5 +75,18 @@
             "evolutionStage": 1,
             "fullyEvolved": false
         }
+    ],
+
+    "gen3": [
+        {
+            "name": "marill",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "azumarill",
+            "evolutionStage": 3,
+            "fullyEvolved": true
+        }
     ]
 }
