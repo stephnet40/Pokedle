@@ -10,5 +10,118 @@
             "type1": "electric",
             "type2": "steel"
         }
+    ],
+
+    "gen6": [
+        {
+            "name": "clefairy",
+            "type1": "fairy",
+            "type2": ""
+        },
+        {
+            "name": "clefable",
+            "type1": "fairy",
+            "type2": ""
+        },
+        {
+            "name": "jigglypuff",
+            "type1": "normal",
+            "type2": "fairy"
+        },
+        {
+            "name": "wigglytuff",
+            "type1": "normal",
+            "type2": "fairy"
+        },
+        {
+            "name": "mr-mime",
+            "type1": "psychic",
+            "type2": "fairy"
+        },
+        {
+            "name": "cleffa",
+            "type1": "fairy",
+            "type2": ""
+        },
+        {
+            "name": "igglybuff",
+            "type1": "normal",
+            "type2": "fairy"
+        },
+        {
+            "name": "togepi",
+            "type1": "fairy",
+            "type2": ""
+        },
+        {
+            "name": "togetic",
+            "type1": "fairy",
+            "type2": "flying"
+        },
+        {
+            "name": "marill",
+            "type1": "water",
+            "type2": "fairy"
+        },
+        {
+            "name": "azumarill",
+            "type1": "water",
+            "type2": "fairy"
+        },
+        {
+            "name": "snubbull",
+            "type1": "fairy",
+            "type2": ""
+        },
+        {
+            "name": "granbull",
+            "type1": "fairy",
+            "type2": ""
+        },
+        {
+            "name": "ralts",
+            "type1": "psychic",
+            "type2": "fairy"
+        },
+        {
+            "name": "kirlia",
+            "type1": "psychic",
+            "type2": "fairy"
+        },
+        {
+            "name": "gardevoir",
+            "type1": "psychic",
+            "type2": "fairy"
+        },
+        {
+            "name": "azurill",
+            "type1": "normal",
+            "type2": "fairy"
+        },
+        {
+            "name": "mawile",
+            "type1": "steel",
+            "type2": "fairy"
+        },
+        {
+            "name": "mime-jr.",
+            "type1": "psychic",
+            "type2": "fairy"
+        },
+        {
+            "name": "togekiss",
+            "type1": "fairy",
+            "type2": "flying"
+        },
+        {
+            "name": "cottonee",
+            "type1": "grass",
+            "type2": "fairy"
+        },
+        {
+            "name": "whimsicott",
+            "type1": "grass",
+            "type2": "fairy"
+        }
     ]
 }

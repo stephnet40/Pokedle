@@ -93,5 +93,174 @@
             "evolutionStage": 2,
             "fullyEvolved": true
         }
+    ],
+
+    "gen4": [
+        {
+            "name": "magneton",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "lickitung",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "rhydon",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "chansey",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "tangela",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "mr-mime",
+            "evolutionStage": 2,
+            "fullyEvolved": true
+        },
+        {
+            "name": "electabuzz",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "magmar",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "snorlax",
+            "evolutionStage": 2,
+            "fullyEvolved": true
+        },
+        {
+            "name": "togetic",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "sudowoodo",
+            "evolutionStage": 2,
+            "fullyEvolved": true
+        },
+        {
+            "name": "yanma",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "murkrow",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "misdreavus",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "gligar",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "sneasel",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "piloswine",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "mantine",
+            "evolutionStage": 2,
+            "fullyEvolved": true
+        },
+        {
+            "name": "porygon2",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "blissey",
+            "evolutionStage": 3,
+            "fullyEvolved": true
+        },
+        {
+            "name": "nosepass",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "roselia",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "dusclops",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "chimecho",
+            "evolutionStage": 2,
+            "fullyEvolved": true
+        }
+    ],
+
+    "gen8": [
+        {
+            "name": "mr-mime",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "ursaring",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "stantler",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        }
+    ],
+
+    "gen9": [
+        {
+            "name": "primeape",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "girafarig",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "dunsparce",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
+            "name": "bisharp",
+            "evolutionStage": 2,
+            "fullyEvolved": false
+        },
+        {
+            "name": "duraludon",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        }
     ]
 }
