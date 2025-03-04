@@ -152,6 +152,11 @@
             "fullyEvolved": true
         },
         {
+            "name": "aipom",
+            "evolutionStage": 1,
+            "fullyEvolved": false
+        },
+        {
             "name": "yanma",
             "evolutionStage": 1,
             "fullyEvolved": false
