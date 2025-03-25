@@ -34,7 +34,7 @@ const HintDetails = ({isOpen, hintType, pokemon} : HintDetailsProps) => {
                         </div>
                     )
                 case "silhouette":
-                    const imgSrc = getImgSrc(pokemon.name);
+                    const imgSrc = getImgSrc(pokemon.id);
                     return (
                         <div className={hintType}>
                             <img src={imgSrc}></img>

@@ -14,16 +14,8 @@ export const getDailyPokemon = ({allPokemon, generateDailyPokemon} : getDailyPok
     generateDailyPokemon(pokemon);
 }
 
-export const getImgSrc = (name: string) => {
-  if (name.includes("mime")) {
-    name = name.replace(". ", "-")
-  }
-
-  if (name.includes("'d")) {
-    name = name.replace("'", "")
-  }
-
-  return `sprites/${name}.png`;
+export const getImgSrc = (id: number) => {
+  return `sprites/${id}.png`;
 }
 
 export const formatName = (name: string) => {

@@ -171,7 +171,7 @@ function App() {
               {searchResults.map((result, index) => 
                 <li key={index}>
                   <button key={`${index}-btn`} onClick={() => selectPokemon(result)}>
-                    <img src={getImgSrc(result.name)}></img>
+                    <img src={getImgSrc(result.id)}></img>
                     {formatName(result.name)}
                   </button>
                 </li>)}
@@ -197,7 +197,7 @@ function App() {
             {guesses.map((pokemon, index) => 
               <div key={`${index}-${pokemon}`} className='pokemon-clues'>
                 <div key={`${index}-${pokemon}-name`} className='pokemon-img'>
-                  <img src={getImgSrc(pokemon.name)}></img>
+                  <img src={getImgSrc(pokemon.id)}></img>
                 </div>
                 <div key={`${index}-${pokemon}-type1`}
                     className={pokemon.type1 == dailyPokemon?.type1 ? 'correct' : 'wrong'}
