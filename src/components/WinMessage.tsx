@@ -3,10 +3,11 @@ import { formatName, getImgSrc } from "../utilities";
 interface WinMessageProps {
     hintsUsed: boolean[];
     numGuesses: number;
+    pokemonId: number;
     pokemonName: string;
 }
 
-const WinMessage = ({hintsUsed, numGuesses, pokemonName} : WinMessageProps) => {
+const WinMessage = ({hintsUsed, numGuesses, pokemonId, pokemonName} : WinMessageProps) => {
 
     return (
         <div className="win-message">
@@ -14,7 +15,7 @@ const WinMessage = ({hintsUsed, numGuesses, pokemonName} : WinMessageProps) => {
 
             <div>
                 <div className="pokemon-img">
-                    <img src={getImgSrc(pokemonName)}></img>
+                    <img src={getImgSrc(pokemonId)}></img>
                 </div>
 
                 <div>  

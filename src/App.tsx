@@ -5,6 +5,7 @@ import { compareColor, compareSize, formatColors, formatHeight, formatName, form
 import HintDetails from './components/HintDetails';
 import WinMessage from './components/WinMessage';
 import GenerationSelect from './components/GenerationSelect';
+import HintBox from './components/HintBox';
 
 export interface Pokemon {
   id: number,
@@ -37,30 +38,14 @@ function App() {
   const [searchResults, setSearchResults] = useState<Pokemon[]>([]);
   const [currGuess, setCurrGuess] = useState<Pokemon>();
   const [guesses, setGuesses] = useState<Pokemon[]>([]);
-  const [showHint, setShowHint] = useState<boolean>(false);
-  const [hintType, setHintType] = useState<string>("ability");
-  const [hintsUnlocked, setHintsUnlocked] = useState<number>(0);
-  const [hintsUsed, setHintsUsed] = useState<boolean[]>(new Array(3).fill(false))
+  const [hintsUsed, setHintsUsed] = useState<boolean[]>(new Array(3).fill(false));
+  const updateHintsUsed = (hints: any) => {
+    setHintsUsed(hints);
+  }
 
   useEffect(() => {
     getDailyPokemon({allPokemon, generateDailyPokemon});
   }, []);
-
-  useEffect(() => {
-    switch (guesses.length) {
-      case 4:
-        setHintsUnlocked(1);
-        break;
-      case 7:
-        setHintsUnlocked(2);
-        break;
-      case 10:
-        setHintsUnlocked(3);
-        break;
-      default:
-        break;
-    }
-  }, [guesses.length]);
   
   const handleSearch = (searchTerm: string) => {
     if (searchTerm) {
@@ -92,20 +77,6 @@ function App() {
     setSearchInput('');
     setSearchResults([]);
   } 
-
-  const getNextHintUnlock = () => {
-    if (hintsUnlocked == 2) return 10 - guesses.length;
-    if (hintsUnlocked == 1) return 7 - guesses.length;
-    return 4 - guesses.length;
-  }
-
-  const getUsedHints = (hintNum: number) => {
-    if (!hintsUsed[hintNum]) {
-      const updateHints = hintsUsed;
-      updateHints[hintNum] = true;
-      setHintsUsed(updateHints);
-    }
-  }
   
   return (
     <>
@@ -120,51 +91,14 @@ function App() {
           updateSelectedGens={updateSelectedGens}
         />
         
-        <div className={currGuess == dailyPokemon ? 'hide' : ''}>
-          <div className='hints'>
-            <div>{hintsUnlocked < 3 ? `Next hint unlocked in ${getNextHintUnlock()} guesses.` : ""}</div>
-            <div className='hint-buttons'>
-              {/* Ability */}
-              <button 
-                onClick={() => {
-                  setShowHint(showHint && hintType != "ability" ? true : !showHint); 
-                  setHintType("ability");
-                  getUsedHints(0);
-                }} 
-                disabled={guesses.length < 4}
-              >
-                {guesses.length < 4 ? "Hint 1" : "Ability"}
-              </button>
-              {/* Pokedex Description */}
-              <button 
-                onClick={() => {
-                  setShowHint(showHint && hintType != "dex" ? true : !showHint); 
-                  setHintType("dex");
-                  getUsedHints(1);
-                }}
-                disabled={guesses.length < 7}
-              >
-                {guesses.length < 7 ? "Hint 2" : "Dex Entry"}
-              </button>
-              {/* Blurry Silhouette */}
-              <button 
-                onClick={() => {
-                  setShowHint(showHint && hintType != "silhouette" ? true : !showHint); 
-                  setHintType("silhouette");
-                  getUsedHints(2);
-                }}
-                disabled={guesses.length < 10}
-              >
-                {guesses.length < 10 ? "Hint 3" : "Silhouette"}
-              </button>
-            </div>
-            <HintDetails 
-                isOpen={showHint}
-                hintType={hintType}
-                pokemon={dailyPokemon!}
-            />
-          </div>
-
+        <div className={currGuess == dailyPokemon ? 'hide' : ''}> 
+          <HintBox 
+            numGuesses={guesses.length}
+            correctPokemon={dailyPokemon}
+            hintsUsed={hintsUsed}
+            updateHintsUsed={updateHintsUsed}
+          />
+          
           <div className='search'>
             <input type='text' placeholder='Search for Pokémon' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
             <ul className='filtered-search'>
@@ -186,7 +120,12 @@ function App() {
         </div>
 
         <div className={currGuess == dailyPokemon ? '' : 'hide'}>
-          <WinMessage hintsUsed={hintsUsed} numGuesses={guesses.length} pokemonName={dailyPokemon!.name} />
+          <WinMessage 
+            hintsUsed={hintsUsed} 
+            numGuesses={guesses.length}
+            pokemonId={dailyPokemon!.id} 
+            pokemonName={dailyPokemon!.name} 
+          />
         </div>
 
         <div className='guess-list'>
