@@ -1,17 +1,17 @@
 import { Pokemon } from "./App"
 
-interface getDailyPokemonProps {
+interface getCorrectPokemonProps {
     allPokemon: Pokemon[],
-    generateDailyPokemon: any
+    generateCorrectPokemon: any
 }
 
-export const getDailyPokemon = ({allPokemon, generateDailyPokemon} : getDailyPokemonProps) => {
+export const getCorrectPokemon = ({allPokemon, generateCorrectPokemon: generateCorrectPokemon} : getCorrectPokemonProps) => {
     
     const pokeId = Math.floor(Math.random() * (151 - 1)) + 1;
     
     const pokemon = allPokemon.find(x => x.id == pokeId)!;
 
-    generateDailyPokemon(pokemon);
+    generateCorrectPokemon(pokemon);
 }
 
 export const getImgSrc = (id: number) => {

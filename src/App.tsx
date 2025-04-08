@@ -1,8 +1,7 @@
-import data from './data/pokemon.json'
+import data from './data/gen1.json'
 import './App.css'
 import { useEffect, useState } from 'react';
-import { compareColor, compareSize, formatColors, formatHeight, formatName, formatTypes, formatWeight, getDailyPokemon, getImgSrc } from './utilities';
-import HintDetails from './components/HintDetails';
+import { compareColor, compareSize, formatColors, formatHeight, formatName, formatTypes, formatWeight, getCorrectPokemon as getCorrectPokemon, getImgSrc } from './utilities';
 import WinMessage from './components/WinMessage';
 import GenerationSelect from './components/GenerationSelect';
 import HintBox from './components/HintBox';
@@ -29,11 +28,14 @@ function App() {
   }
 
   const [allPokemon, setAllPokemon] = useState<Pokemon[]>(data.pokemon);
-  const [dailyPokemon, setDailyPokemon] = useState<Pokemon>(data.pokemon[0]);
-  const generateDailyPokemon = (data: any) => {
-    setDailyPokemon(data);
+  const updateAllPokemon = (data: any) => {
+    setAllPokemon(data);
   }
-
+  const [correctPokemon, setCorrectPokemon] = useState<Pokemon>(data.pokemon[0]);
+  const generateCorrectPokemon = (data: any) => {
+    setCorrectPokemon(data);
+  }
+  
   const [searchInput, setSearchInput] = useState<string>('');
   const [searchResults, setSearchResults] = useState<Pokemon[]>([]);
   const [currGuess, setCurrGuess] = useState<Pokemon>();
@@ -44,7 +46,7 @@ function App() {
   }
 
   useEffect(() => {
-    getDailyPokemon({allPokemon, generateDailyPokemon});
+    getCorrectPokemon({allPokemon, generateCorrectPokemon: generateCorrectPokemon});
   }, []);
   
   const handleSearch = (searchTerm: string) => {
@@ -89,18 +91,20 @@ function App() {
         <GenerationSelect 
           selectedGens={selectedGens}
           updateSelectedGens={updateSelectedGens}
+          updateAllPokemon={updateAllPokemon}
+          generateCorrectPokemon={generateCorrectPokemon}
         />
         
-        <div className={currGuess == dailyPokemon ? 'hide' : ''}> 
+        <div className={currGuess == correctPokemon ? 'hide' : ''}> 
           <HintBox 
             numGuesses={guesses.length}
-            correctPokemon={dailyPokemon}
+            correctPokemon={correctPokemon}
             hintsUsed={hintsUsed}
             updateHintsUsed={updateHintsUsed}
           />
           
           <div className='search'>
-            <input type='text' placeholder='Search for Pokémon' value={searchInput} onChange={handleInputChange} disabled={currGuess == dailyPokemon}></input>
+            <input type='text' placeholder='Search for Pokémon' value={searchInput} onChange={handleInputChange} disabled={currGuess == correctPokemon}></input>
             <ul className='filtered-search'>
               {searchResults.map((result, index) => 
                 <li key={index}>
@@ -119,12 +123,12 @@ function App() {
           </div>
         </div>
 
-        <div className={currGuess == dailyPokemon ? '' : 'hide'}>
+        <div className={currGuess == correctPokemon ? '' : 'hide'}>
           <WinMessage 
             hintsUsed={hintsUsed} 
             numGuesses={guesses.length}
-            pokemonId={dailyPokemon!.id} 
-            pokemonName={dailyPokemon!.name} 
+            pokemonId={correctPokemon!.id} 
+            pokemonName={correctPokemon!.name} 
           />
         </div>
 
@@ -139,41 +143,41 @@ function App() {
                   <img src={getImgSrc(pokemon.id)}></img>
                 </div>
                 <div key={`${index}-${pokemon}-type1`}
-                    className={pokemon.type1 == dailyPokemon?.type1 ? 'correct' : 'wrong'}
+                    className={pokemon.type1 == correctPokemon?.type1 ? 'correct' : 'wrong'}
                 >
                   {formatTypes(pokemon.type1)}
                 </div>
                 <div key={`${index}-${pokemon}-type2`}
-                    className={pokemon.type2 == dailyPokemon?.type2 ? 'correct' : 'wrong'}
+                    className={pokemon.type2 == correctPokemon?.type2 ? 'correct' : 'wrong'}
                 >
                   {pokemon.type2 ? formatTypes(pokemon.type2) : "None"}
                 </div>
                 <div key={`${index}-${pokemon}-evolution-stage`}
-                    className={pokemon.evolutionStage == dailyPokemon?.evolutionStage ? 'correct' : 'wrong'}
+                    className={pokemon.evolutionStage == correctPokemon?.evolutionStage ? 'correct' : 'wrong'}
                 >
                   {pokemon.evolutionStage}
                 </div>
                 <div key={`${index}-${pokemon}-fully-evolved`}
-                    className={pokemon.fullyEvolved == dailyPokemon?.fullyEvolved ? 'correct' : 'wrong'}
+                    className={pokemon.fullyEvolved == correctPokemon?.fullyEvolved ? 'correct' : 'wrong'}
                 >
                   {pokemon.fullyEvolved ? "Yes" : "No"}
                 </div>
                 <div key={`${index}-${pokemon}-color`}
-                    className={compareColor(pokemon.color, dailyPokemon!.color)}
+                    className={compareColor(pokemon.color, correctPokemon!.color)}
                 >
                   {formatColors(pokemon.color)}
                 </div>
                 <div key={`${index}-${pokemon}-height`}
-                    className={pokemon.height == dailyPokemon?.height ? 'correct' : 'wrong'}
+                    className={pokemon.height == correctPokemon?.height ? 'correct' : 'wrong'}
                 >
                   {formatHeight(pokemon.height)}
-                  {pokemon.height != dailyPokemon!.height ? compareSize(pokemon.height, dailyPokemon!.height) : ''}
+                  {pokemon.height != correctPokemon!.height ? compareSize(pokemon.height, correctPokemon!.height) : ''}
                 </div>
                 <div key={`${index}-${pokemon}-weight`}
-                    className={pokemon.weight == dailyPokemon?.weight ? 'correct' : 'wrong'}
+                    className={pokemon.weight == correctPokemon?.weight ? 'correct' : 'wrong'}
                 >
                   {formatWeight(pokemon.weight)}
-                  {pokemon.weight != dailyPokemon!.weight ? compareSize(pokemon.weight, dailyPokemon!.weight) : ''}
+                  {pokemon.weight != correctPokemon!.weight ? compareSize(pokemon.weight, correctPokemon!.weight) : ''}
                 </div>
               </div>
             )}
