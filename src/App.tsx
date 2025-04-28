@@ -1,7 +1,7 @@
 import data from './data/gen1.json'
 import './App.css'
 import { useEffect, useState } from 'react';
-import { compareColor, compareSize, formatColors, formatHeight, formatName, formatTypes, formatWeight, getCorrectPokemon as getCorrectPokemon, getImgSrc } from './utilities';
+import { compareColor, compareSize, formatColors, formatHeight, formatTypes, formatWeight, getCorrectPokemon as getCorrectPokemon, getImgSrc } from './utilities';
 import WinMessage from './components/WinMessage';
 import GenerationSelect from './components/GenerationSelect';
 import HintBox from './components/HintBox';
