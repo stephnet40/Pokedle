@@ -58,7 +58,6 @@ function App() {
 
   const clueLabels = ["Pokémon", "Type 1", "Type 2", "Evolution Stage", "Fully Evolved", "Color", "Height", "Weight"];
 
-console.log(guesses)
   return (
     <>
       <div>
