@@ -5,6 +5,7 @@ import { compareColor, compareSize, formatColors, formatHeight, formatName, form
 import WinMessage from './components/WinMessage';
 import GenerationSelect from './components/GenerationSelect';
 import HintBox from './components/HintBox';
+import Search from './components/Search';
 
 export interface Pokemon {
   id: number,
@@ -35,20 +36,28 @@ function App() {
   const generateCorrectPokemon = (data: any) => {
     setCorrectPokemon(data);
   }
-  
+
   const [searchInput, setSearchInput] = useState<string>('');
   const [searchResults, setSearchResults] = useState<Pokemon[]>([]);
   const [currGuess, setCurrGuess] = useState<Pokemon>();
+  const updateCurrGuess = (guess: any) => {
+    setCurrGuess(guess);
+  }
+
   const [guesses, setGuesses] = useState<Pokemon[]>([]);
+  const updateGuesses = (allGuesses: any) => {
+    setGuesses(allGuesses);
+  }
+
   const [hintsUsed, setHintsUsed] = useState<boolean[]>(new Array(3).fill(false));
   const updateHintsUsed = (hints: any) => {
     setHintsUsed(hints);
   }
 
   useEffect(() => {
-    getCorrectPokemon({allPokemon, generateCorrectPokemon: generateCorrectPokemon});
+    getCorrectPokemon({ allPokemon, generateCorrectPokemon: generateCorrectPokemon });
   }, []);
-  
+
   const handleSearch = (searchTerm: string) => {
     if (searchTerm) {
       const searchLength = searchTerm.length;
@@ -78,8 +87,8 @@ function App() {
 
     setSearchInput('');
     setSearchResults([]);
-  } 
-  
+  }
+console.log(guesses)
   return (
     <>
       <div>
@@ -88,93 +97,84 @@ function App() {
           <h2>A Wordle-inspired Pokemon Guessing Game</h2>
         </div>
 
-        <GenerationSelect 
+        <GenerationSelect
           selectedGens={selectedGens}
           updateSelectedGens={updateSelectedGens}
           updateAllPokemon={updateAllPokemon}
           generateCorrectPokemon={generateCorrectPokemon}
         />
-        
-        <div className={currGuess == correctPokemon ? 'hide' : ''}> 
-          <HintBox 
+
+        <div className={currGuess == correctPokemon ? 'hide' : ''}>
+          <HintBox
             numGuesses={guesses.length}
             correctPokemon={correctPokemon}
             hintsUsed={hintsUsed}
             updateHintsUsed={updateHintsUsed}
           />
-          
-          <div className='search'>
-            <input type='text' placeholder='Search for Pokémon' value={searchInput} onChange={handleInputChange} disabled={currGuess == correctPokemon}></input>
-            <ul className='filtered-search'>
-              {searchResults.map((result, index) => 
-                <li key={index}>
-                  <button key={`${index}-btn`} onClick={() => selectPokemon(result)}>
-                    <img src={getImgSrc(result.id)}></img>
-                    {formatName(result.name)}
-                  </button>
-                </li>)}
-              {searchInput.length && !searchResults.length ? 
-                <li className='empty-list'>
-                  <button>No Pokemon found</button>
-                </li> :
-                <li></li>
-              }
-            </ul>
-          </div>
-        </div>
 
-        <div className={currGuess == correctPokemon ? '' : 'hide'}>
-          <WinMessage 
-            hintsUsed={hintsUsed} 
-            numGuesses={guesses.length}
-            pokemonId={correctPokemon!.id} 
-            pokemonName={correctPokemon!.name} 
+          <Search
+            allPokemon={allPokemon}
+            correctPokemon={correctPokemon}
+            guesses={guesses}
+            currGuess={currGuess}
+            updateAllPokemon={updateAllPokemon}
+            updateGuesses={updateGuesses}
+            updateCurrGuess={updateCurrGuess}
           />
         </div>
 
+        <div className={currGuess == correctPokemon ? '' : 'hide'}>
+          <WinMessage
+            hintsUsed={hintsUsed}
+            numGuesses={guesses.length}
+            pokemonId={correctPokemon!.id}
+            pokemonName={correctPokemon!.name}
+          />
+        </div>
+            
         <div className='guess-list'>
           <div className='clue-labels'>
             {guesses.length ? clueLabels.map((clue, index) => <div key={`${index}-${clue}`} className='label'>{clue}</div>) : <div></div>}
           </div>
           <div>
-            {guesses.map((pokemon, index) => 
+            {guesses.map((pokemon, index) =>
               <div key={`${index}-${pokemon}`} className='pokemon-clues'>
                 <div key={`${index}-${pokemon}-name`} className='pokemon-img'>
                   <img src={getImgSrc(pokemon.id)}></img>
                 </div>
                 <div key={`${index}-${pokemon}-type1`}
-                    className={pokemon.type1 == correctPokemon?.type1 ? 'correct' : 'wrong'}
+                  className={pokemon.type1 == correctPokemon?.type1 ? 'correct' : 'wrong'}
                 >
                   {formatTypes(pokemon.type1)}
                 </div>
                 <div key={`${index}-${pokemon}-type2`}
-                    className={pokemon.type2 == correctPokemon?.type2 ? 'correct' : 'wrong'}
+                  className={pokemon.type2 == correctPokemon?.type2 ? 'correct' : 'wrong'}
                 >
                   {pokemon.type2 ? formatTypes(pokemon.type2) : "None"}
                 </div>
                 <div key={`${index}-${pokemon}-evolution-stage`}
-                    className={pokemon.evolutionStage == correctPokemon?.evolutionStage ? 'correct' : 'wrong'}
+                  className={pokemon.evolutionStage == correctPokemon?.evolutionStage ? 'correct' : 'wrong'}
                 >
                   {pokemon.evolutionStage}
                 </div>
                 <div key={`${index}-${pokemon}-fully-evolved`}
-                    className={pokemon.fullyEvolved == correctPokemon?.fullyEvolved ? 'correct' : 'wrong'}
+                  className={pokemon.fullyEvolved == correctPokemon?.fullyEvolved ? 'correct' : 'wrong'}
                 >
                   {pokemon.fullyEvolved ? "Yes" : "No"}
                 </div>
                 <div key={`${index}-${pokemon}-color`}
-                    className={compareColor(pokemon.color, correctPokemon!.color)}
+                  className={compareColor(pokemon.color, correctPokemon!.color)}
                 >
                   {formatColors(pokemon.color)}
                 </div>
                 <div key={`${index}-${pokemon}-height`}
-                    className={pokemon.height == correctPokemon?.height ? 'correct' : 'wrong'}
+                  className={pokemon.height == correctPokemon?.height ? 'correct' : 'wrong'}
                 >
                   {formatHeight(pokemon.height)}
                   {pokemon.height != correctPokemon!.height ? compareSize(pokemon.height, correctPokemon!.height) : ''}
                 </div>
                 <div key={`${index}-${pokemon}-weight`}
-                    className={pokemon.weight == correctPokemon?.weight ? 'correct' : 'wrong'}
+                  className={pokemon.weight == correctPokemon?.weight ? 'correct' : 'wrong'}
                 >
                   {formatWeight(pokemon.weight)}
                   {pokemon.weight != correctPokemon!.weight ? compareSize(pokemon.weight, correctPokemon!.weight) : ''}
