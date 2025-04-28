@@ -37,8 +37,6 @@ function App() {
     setCorrectPokemon(data);
   }
 
-  const [searchInput, setSearchInput] = useState<string>('');
-  const [searchResults, setSearchResults] = useState<Pokemon[]>([]);
   const [currGuess, setCurrGuess] = useState<Pokemon>();
   const updateCurrGuess = (guess: any) => {
     setCurrGuess(guess);
@@ -58,36 +56,8 @@ function App() {
     getCorrectPokemon({ allPokemon, generateCorrectPokemon: generateCorrectPokemon });
   }, []);
 
-  const handleSearch = (searchTerm: string) => {
-    if (searchTerm) {
-      const searchLength = searchTerm.length;
-      const filteredResults = allPokemon.filter(pokemon => [...pokemon.name].slice(0, searchLength).join('') == searchTerm.toLowerCase());
-      setSearchResults(filteredResults);
-    } else {
-      setSearchResults([]);
-    }
-  }
-
   const clueLabels = ["Pokémon", "Type 1", "Type 2", "Evolution Stage", "Fully Evolved", "Color", "Height", "Weight"];
 
-  const handleInputChange = (event: any) => {
-    setSearchInput(event.target.value);
-    handleSearch(event.target.value);
-  }
-
-  const selectPokemon = (pokemon: Pokemon) => {
-    let currList = guesses;
-    currList.unshift(pokemon);
-    setGuesses(currList);
-    setCurrGuess(pokemon);
-
-    let currPokemon = allPokemon;
-    currPokemon.splice(currPokemon.indexOf(pokemon), 1);
-    setAllPokemon(currPokemon);
-
-    setSearchInput('');
-    setSearchResults([]);
-  }
 console.log(guesses)
   return (
     <>
